@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/schema/mybatis-3-mapper.dtd">
+
+
+<mapper namespace="productMapper">
+
+<!-- 리뷰 수 -->
+    <select id="reviewCnt" parameterType="String" resultType="int">
+        select p_serialNo, count(*) as reviewCnt from review group by p_serialNo;
+    </select>
+
+<!-- Best 10 -->
+    <select id="selectAllBest" resultType="ProductDto">
+        select product3.*, img2.covered_src
+        from (select product2.*, img.src
+        from (select product.*, review.reviewCnt
+        from (select * from product order by p_saleCount desc limit 10) as product
+        left join (select p_serialNo, count(*) as reviewCnt from review group by p_serialNo) as review
+        on product.p_serialNo = review.p_serialNo) as product2
+        left join (select p_serialNo, p_productImg as src from product_img as src where true and p_productImg like "%_1.%") as img
+        on product2.p_serialNo = img.p_serialNo) as product3
+        left join(select p_serialNo, p_productImg as covered_src from product_img where true and p_productImg like "%_2.%") as img2
+        on product3.p_serialNo = img2.p_serialNo
+    </select>
+
+    <select id="selectBest" parameterType="String" resultType="ProductDto">
+        select product3.*, img2.covered_src
+        from (select product2.*, img.src
+        from (select product.*, review.reviewCnt
+        from (select * from product where true AND p_serialNo like concat(#{keyword}, "%") order by p_saleCount desc limit 10) as product
+        left join (select p_serialNo, count(*) as reviewCnt from review group by p_serialNo) as review
+        on product.p_serialNo = review.p_serialNo) as product2
+        left join (select p_serialNo, p_productImg as src from product_img as src where true and p_productImg like "%_1.%") as img
+        on product2.p_serialNo = img.p_serialNo) as product3
+        left join(select p_serialNo, p_productImg as covered_src from product_img where true and p_productImg like "%_2.%") as img2
+        on product3.p_serialNo = img2.p_serialNo;
+    </select>
+
+<!-- 실시간 급상승 -->
+    <select id="selectAllHits" resultType="ProductDto">
+        select product3.*, img2.covered_src
+        from (select product2.*, img.src
+        from (select product.*, review.reviewCnt
+        from (select * from product order by p_hits desc limit 14) as product
+        left join (select p_serialNo, count(*) as reviewCnt from review group by p_serialNo) as review
+        on product.p_serialNo = review.p_serialNo) as product2
+        left join (select p_serialNo, p_productImg as src from product_img as src where true and p_productImg like "%_1.%") as img
+        on product2.p_serialNo = img.p_serialNo) as product3
+        left join(select p_serialNo, p_productImg as covered_src from product_img where true and p_productImg like "%_2.%") as img2
+        on product3.p_serialNo = img2.p_serialNo;
+    </select>
+
+<!-- 카테고리별 항목 -->
+    <select id="selectCate" parameterType="String" resultType="ProductDto">
+        select product3.*, img2.covered_src
+        from (select product2.*, img.src
+        from (select product.*, review.reviewCnt
+        from (select * from product
+        where true AND p_serialNo like concat(#{keyword}, "%")
+        order by p_saleDate desc limit 8) as product
+        left join (select p_serialNo, count(*) as reviewCnt from review group by p_serialNo) as review
+        on product.p_serialNo = review.p_serialNo) as product2
+        left join (select p_serialNo, p_productImg as src from product_img as src where true and p_productImg like "%_1.%") as img
+        on product2.p_serialNo = img.p_serialNo) as product3
+        left join(select p_serialNo, p_productImg as covered_src from product_img where true and p_productImg like "%_1.%") as img2
+        on product3.p_serialNo = img2.p_serialNo;
+    </select>
+
+</mapper>
