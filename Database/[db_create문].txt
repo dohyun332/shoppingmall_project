@@ -1,0 +1,150 @@
+CREATE TABLE `address` (
+  `p_invoice` int NOT NULL AUTO_INCREMENT,
+  `m_id` varchar(255) NOT NULL,
+  `p_name` varchar(255) NOT NULL,
+  `p_cell` varchar(255) NOT NULL,
+  `p_email` varchar(255) NOT NULL,
+  `p_homeAddr` int NOT NULL,
+  `p_deliveryName` varchar(255) NOT NULL,
+  `p_deliveryCell1` varchar(255) NOT NULL,
+  `p_deliveryCell2` varchar(255) DEFAULT NULL,
+  `p_zipCode` varchar(6) NOT NULL,
+  `p_destination1` varchar(255) NOT NULL,
+  `p_destination2` varchar(255) NOT NULL,
+  `p_deliveryMessage` varchar(255) NOT NULL,
+  `p_totalPrice` int NOT NULL,
+  `p_deliveryPrice` int NOT NULL,
+  `p_pay` int NOT NULL,
+  `p_buyDate` varchar(255) NOT NULL,
+  PRIMARY KEY (`p_invoice`)
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+CREATE TABLE `member` (
+  `m_idx` int NOT NULL AUTO_INCREMENT,
+  `m_id` varchar(255) NOT NULL,
+  `m_pw` varchar(255) NOT NULL,
+  `m_name` varchar(255) NOT NULL,
+  `m_cell` varchar(255) NOT NULL,
+  `m_email` varchar(255) NOT NULL,
+  `m_zipCode` varchar(6) NOT NULL,
+  `m_addr1` varchar(255) NOT NULL,
+  `m_addr2` varchar(255) NOT NULL,
+  `m_gender` int NOT NULL,
+  `m_birthday` varchar(255) NOT NULL,
+  `m_joinDate` varchar(255) NOT NULL,
+  `m_lastLogin` varchar(255) DEFAULT NULL,
+  `m_joinChk` int NOT NULL,
+  `m_height` int DEFAULT NULL,
+  `m_weight` int DEFAULT NULL,
+  PRIMARY KEY (`m_idx`)
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+CREATE TABLE `orders` (
+  `p_orderNo` int NOT NULL AUTO_INCREMENT,
+  `m_id` varchar(255) NOT NULL,
+  `p_orderDate` varchar(255) NOT NULL,
+  `p_serialNo` varchar(255) NOT NULL,
+  `p_orderStatus` varchar(255) NOT NULL,
+  `p_buyQuantity` int NOT NULL,
+  `p_buyColor` varchar(255) NOT NULL,
+  `p_buySize` varchar(255) NOT NULL,
+  `p_price` int NOT NULL,
+  `p_buySubtotal` int NOT NULL,
+  `p_invoice` int NOT NULL,
+  PRIMARY KEY (`p_orderNo`)
+) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_cimembermember;
+
+CREATE TABLE `product` (
+  `p_serialNo` varchar(255) NOT NULL,
+  `p_product` varchar(255) NOT NULL,
+  `p_productCategory` int NOT NULL,
+  `p_price` int NOT NULL,
+  `p_saleDate` varchar(255) NOT NULL,
+  `p_hits` int unsigned DEFAULT NULL,
+  `p_saleCount` int unsigned DEFAULT NULL,
+  `p_displayChk` int NOT NULL,
+  PRIMARY KEY (`p_serialNo`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+CREATE TABLE `product_bottom_size` (
+  `p_serialNo` varchar(255) NOT NULL,
+  `p_size` int NOT NULL,
+  `p_sizeImgBot` varchar(255) NOT NULL,
+  `p_sizeWaist` decimal(3,1) NOT NULL,
+  `p_sizeHip` decimal(3,1) NOT NULL,
+  `p_sizeThigh` decimal(3,1) NOT NULL,
+  `p_sizePantsGap` decimal(3,1) NOT NULL,
+  `p_sizePantsTop` decimal(3,1) NOT NULL,
+  `p_sizePants` decimal(3,1) NOT NULL,
+  `p_sizeStretch` int NOT NULL,
+  `p_thicknessBot` int NOT NULL,
+  `p_transparentBot` int NOT NULL,
+  `p_fitBot` int NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+CREATE TABLE `product_cart` (
+  `p_cartNo` int NOT NULL AUTO_INCREMENT,
+  `m_id` varchar(255) NOT NULL,
+  `p_serialNo` varchar(255) NOT NULL,
+  `p_choiceQuantity` int NOT NULL,
+  `p_choiceSize` varchar(255) NOT NULL,
+  `p_choiceColor` varchar(10) NOT NULL,
+  PRIMARY KEY (`p_cartNo`)
+) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+CREATE TABLE `product_img` (
+  `p_no` int NOT NULL AUTO_INCREMENT,
+  `p_serialNo` varchar(255) NOT NULL,
+  `p_productImg` varchar(255) NOT NULL,
+  PRIMARY KEY (`p_no`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+CREATE TABLE `product_stock` (
+  `sp_serialNo` varchar(255) NOT NULL,
+  `p_color` varchar(10) NOT NULL,
+  `p_size` int NOT NULL,
+  `p_storage` int NOT NULL,
+  PRIMARY KEY (`sp_serialNo`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+CREATE TABLE `product_top_size` (
+  `pts_serialNo` varchar(255) NOT NULL,
+  `pts_size` int NOT NULL,
+  `pts_sizeImgTop` varchar(255) NOT NULL,
+  `pts_sizeShoulder` decimal(3,1) NOT NULL,
+  `pts_sizeChest` decimal(3,1) NOT NULL,
+  `pts_sizeTopGap` decimal(3,1) NOT NULL,
+  `pts_sizeRetail` decimal(3,1) NOT NULL,
+  `pts_sizeTop` decimal(3,1) NOT NULL,
+  `pts_sizeStretch` int NOT NULL,
+  `pts_thicknessTop` int NOT NULL,
+  `pts_transparentTop` int NOT NULL,
+  `pts_fitTop` int NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+
+CREATE TABLE `review` (
+  `r_no` int unsigned NOT NULL AUTO_INCREMENT,
+  `m_idx` varchar(255) NOT NULL,
+  `p_serialNo` varchar(255) NOT NULL,
+  `r_star` int NOT NULL,
+  `r_content` text NOT NULL,
+  `r_date` varchar(255) NOT NULL,
+  `r_height` int DEFAULT NULL,
+  `r_weight` int DEFAULT NULL,
+  `r_size` int DEFAULT NULL,
+  PRIMARY KEY (`r_no`)
+) ENGINE=InnoDB AUTO_INCREMENT=86 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+CREATE TABLE `product_img_dm` (
+  `p_DM_no` INT NOT NULL AUTO_INCREMENT,
+  `p_serialNo` VARCHAR(255) NOT NULL,
+  `p_productImg_DM` VARCHAR(255) NOT NULL,
+  PRIMARY KEY (`p_DM_no`));
+
+CREATE TABLE `product_img_dd` (
+  `p_no` int NOT NULL AUTO_INCREMENT,
+  `p_serialNo` varchar(255) NOT NULL,
+  `p_explainImg` varchar(255) NOT NULL,
+  PRIMARY KEY (`p_no`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;

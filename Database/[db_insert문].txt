@@ -1,0 +1,638 @@
+use xexymix;
+
+insert into review values(1, 1, "MT001", 5, "아주좋아요", "2022-11-03", 180, 85, 3);
+insert into review(m_idx, p_serialNo, r_star, r_content, r_date, r_height, r_weight, r_size) values(1, "MT001", 5, "아주좋아요2", "2022-11-05", 180, 85, 3);
+insert into review(m_idx, p_serialNo, r_star, r_content, r_date, r_height, r_weight, r_size) values(3, "MT001", 5, "아주좋아요2", "2022-11-05", 180, 85, 3);
+insert into review(m_idx, p_serialNo, r_star, r_content, r_date, r_height, r_weight, r_size) values(10, "MT002", 5, "아주좋아요2", "2022-11-05", 180, 85, 3);
+insert into review(m_idx, p_serialNo, r_star, r_content, r_date, r_height, r_weight, r_size) values(11, "MT003", 5, "아주좋아요2", "2022-11-05", 180, 85, 3);
+insert into review(m_idx, p_serialNo, r_star, r_content, r_date, r_height, r_weight, r_size) values(12, "MT003", 5, "아주좋아요2", "2022-11-05", 180, 85, 3);
+insert into review(m_idx, p_serialNo, r_star, r_content, r_date, r_height, r_weight, r_size) values(15, "MT003", 5, "아주좋아요2", "2022-11-05", 180, 85, 3);
+insert into review(m_idx, p_serialNo, r_star, r_content, r_date, r_height, r_weight, r_size) values(16, "MT003", 5, "아주좋아요2", "2022-11-05", 180, 85, 3);
+insert into review(m_idx, p_serialNo, r_star, r_content, r_date, r_height, r_weight, r_size) values(17, "MT004", 5, "아주좋아요2", "2022-11-05", 180, 85, 3);
+insert into review(m_idx, p_serialNo, r_star, r_content, r_date, r_height, r_weight, r_size) values(10, "MT004", 5, "아주좋아요2", "2022-11-05", 180, 85, 3);
+insert into review(m_idx, p_serialNo, r_star, r_content, r_date, r_height, r_weight, r_size) values(11, "MT005", 5, "아주좋아요2", "2022-11-05", 180, 85, 3);
+insert into review(m_idx, p_serialNo, r_star, r_content, r_date, r_height, r_weight, r_size) values(12, "MT005", 5, "아주좋아요2", "2022-11-05", 180, 85, 3);
+insert into review(m_idx, p_serialNo, r_star, r_content, r_date, r_height, r_weight, r_size) values(15, "MT005", 5, "아주좋아요2", "2022-11-05", 180, 85, 3);
+insert into review(m_idx, p_serialNo, r_star, r_content, r_date, r_height, r_weight, r_size) values(16, "MT005", 5, "아주좋아요2", "2022-11-05", 180, 85, 3);
+insert into review(m_idx, p_serialNo, r_star, r_content, r_date, r_height, r_weight, r_size) values(17, "MT005", 5, "아주좋아요2", "2022-11-05", 180, 85, 3);
+insert into review(m_idx, p_serialNo, r_star, r_content, r_date, r_height, r_weight, r_size) values(10, "MT005", 5, "아주좋아요2", "2022-11-05", 180, 85, 3);
+insert into review(m_idx, p_serialNo, r_star, r_content, r_date, r_height, r_weight, r_size) values(11, "MT005", 5, "아주좋아요2", "2022-11-05", 180, 85, 3);
+insert into review(m_idx, p_serialNo, r_star, r_content, r_date, r_height, r_weight, r_size) values(12, "MT005", 5, "아주좋아요2", "2022-11-05", 180, 85, 3);
+insert into review(m_idx, p_serialNo, r_star, r_content, r_date, r_height, r_weight, r_size) values(15, "MT006", 5, "아주좋아요2", "2022-11-05", 180, 85, 3);
+insert into review(m_idx, p_serialNo, r_star, r_content, r_date, r_height, r_weight, r_size) values(16, "MT006", 5, "아주좋아요2", "2022-11-05", 180, 85, 3);
+insert into review(m_idx, p_serialNo, r_star, r_content, r_date, r_height, r_weight, r_size) values(17, "MT006", 5, "아주좋아요2", "2022-11-05", 180, 85, 3);
+insert into review(m_idx, p_serialNo, r_star, r_content, r_date, r_height, r_weight, r_size) values(17, "MT007", 5, "아주좋아요2", "2022-11-05", 180, 85, 3);
+insert into review(m_idx, p_serialNo, r_star, r_content, r_date, r_height, r_weight, r_size) values(10, "MT007", 5, "아주좋아요2", "2022-11-05", 180, 85, 3);
+insert into review(m_idx, p_serialNo, r_star, r_content, r_date, r_height, r_weight, r_size) values(11, "MT007", 5, "아주좋아요2", "2022-11-05", 180, 85, 3);
+insert into review(m_idx, p_serialNo, r_star, r_content, r_date, r_height, r_weight, r_size) values(12, "MT007", 5, "아주좋아요2", "2022-11-05", 180, 85, 3);
+insert into review(m_idx, p_serialNo, r_star, r_content, r_date, r_height, r_weight, r_size) values(15, "MT007", 5, "아주좋아요2", "2022-11-05", 180, 85, 3);
+insert into review(m_idx, p_serialNo, r_star, r_content, r_date, r_height, r_weight, r_size) values(16, "MT008", 5, "아주좋아요2", "2022-11-05", 180, 85, 3);
+insert into review(m_idx, p_serialNo, r_star, r_content, r_date, r_height, r_weight, r_size) values(17, "MT009", 5, "아주좋아요2", "2022-11-05", 180, 85, 3);
+insert into review(m_idx, p_serialNo, r_star, r_content, r_date, r_height, r_weight, r_size) values(17, "MT009", 5, "아주좋아요2", "2022-11-05", 180, 85, 3);
+insert into review(m_idx, p_serialNo, r_star, r_content, r_date, r_height, r_weight, r_size) values(10, "MT009", 5, "아주좋아요2", "2022-11-05", 180, 85, 3);
+insert into review(m_idx, p_serialNo, r_star, r_content, r_date, r_height, r_weight, r_size) values(11, "MT009", 5, "아주좋아요2", "2022-11-05", 180, 85, 3);
+insert into review(m_idx, p_serialNo, r_star, r_content, r_date, r_height, r_weight, r_size) values(12, "MT009", 5, "아주좋아요2", "2022-11-05", 180, 85, 3);
+insert into review(m_idx, p_serialNo, r_star, r_content, r_date, r_height, r_weight, r_size) values(15, "MT009", 5, "아주좋아요2", "2022-11-05", 180, 85, 3);
+insert into review(m_idx, p_serialNo, r_star, r_content, r_date, r_height, r_weight, r_size) values(16, "MT009", 5, "아주좋아요2", "2022-11-05", 180, 85, 3);
+insert into review(m_idx, p_serialNo, r_star, r_content, r_date, r_height, r_weight, r_size) values(17, "MT009", 5, "아주좋아요2", "2022-11-05", 180, 85, 3);
+insert into review(m_idx, p_serialNo, r_star, r_content, r_date, r_height, r_weight, r_size) values(7, "MT009", 5, "아주좋아요2", "2022-11-05", 180, 85, 3);
+insert into review(m_idx, p_serialNo, r_star, r_content, r_date, r_height, r_weight, r_size) values(10, "MT009", 5, "아주좋아요2", "2022-11-05", 180, 85, 3);
+insert into review(m_idx, p_serialNo, r_star, r_content, r_date, r_height, r_weight, r_size) values(1, "MT009", 5, "아주좋아요2", "2022-11-05", 180, 85, 3);
+insert into review(m_idx, p_serialNo, r_star, r_content, r_date, r_height, r_weight, r_size) values(2, "MT009", 5, "아주좋아요2", "2022-11-05", 180, 85, 3);
+insert into review(m_idx, p_serialNo, r_star, r_content, r_date, r_height, r_weight, r_size) values(5, "MT010", 5, "아주좋아요2", "2022-11-05", 180, 85, 3);
+insert into review(m_idx, p_serialNo, r_star, r_content, r_date, r_height, r_weight, r_size) values(6, "MT010", 5, "아주좋아요2", "2022-11-05", 180, 85, 3);
+insert into review(m_idx, p_serialNo, r_star, r_content, r_date, r_height, r_weight, r_size) values(7, "MT010", 5, "아주좋아요2", "2022-11-05", 180, 85, 3);
+insert into review(m_idx, p_serialNo, r_star, r_content, r_date, r_height, r_weight, r_size) values(6, "MT010", 5, "아주좋아요2", "2022-11-05", 180, 85, 3);
+insert into review(m_idx, p_serialNo, r_star, r_content, r_date, r_height, r_weight, r_size) values(3, "MT010", 5, "아주좋아요2", "2022-11-05", 180, 85, 3);
+insert into review(m_idx, p_serialNo, r_star, r_content, r_date, r_height, r_weight, r_size) values(11, "MT010", 5, "아주좋아요2", "2022-11-05", 180, 85, 3);
+insert into review(m_idx, p_serialNo, r_star, r_content, r_date, r_height, r_weight, r_size) values(12, "MT005", 5, "아주좋아요2", "2022-11-05", 180, 85, 3);
+insert into review(m_idx, p_serialNo, r_star, r_content, r_date, r_height, r_weight, r_size) values(15, "MT001", 5, "아주좋아요2", "2022-11-05", 180, 85, 3);
+insert into review(m_idx, p_serialNo, r_star, r_content, r_date, r_height, r_weight, r_size) values(16, "MT001", 5, "아주좋아요2", "2022-11-05", 180, 85, 3);
+insert into review(m_idx, p_serialNo, r_star, r_content, r_date, r_height, r_weight, r_size) values(17, "MT001", 5, "아주좋아요2", "2022-11-05", 180, 85, 3);
+insert into review(m_idx, p_serialNo, r_star, r_content, r_date, r_height, r_weight, r_size) values(17, "MT005", 5, "아주좋아요2", "2022-11-05", 180, 85, 3);
+insert into review(m_idx, p_serialNo, r_star, r_content, r_date, r_height, r_weight, r_size) values(10, "MT005", 5, "아주좋아요2", "2022-11-05", 180, 85, 3);
+insert into review(m_idx, p_serialNo, r_star, r_content, r_date, r_height, r_weight, r_size) values(11, "MT005", 5, "아주좋아요2", "2022-11-05", 180, 85, 3);
+insert into review(m_idx, p_serialNo, r_star, r_content, r_date, r_height, r_weight, r_size) values(12, "MT005", 5, "아주좋아요2", "2022-11-05", 180, 85, 3);
+insert into review(m_idx, p_serialNo, r_star, r_content, r_date, r_height, r_weight, r_size) values(15, "MT001", 5, "아주좋아요2", "2022-11-05", 180, 85, 3);
+insert into review(m_idx, p_serialNo, r_star, r_content, r_date, r_height, r_weight, r_size) values(16, "MT001", 5, "아주좋아요2", "2022-11-05", 180, 85, 3);
+insert into review(m_idx, p_serialNo, r_star, r_content, r_date, r_height, r_weight, r_size) values(17, "MT001", 5, "아주좋아요2", "2022-11-05", 180, 85, 3);
+insert into review(m_idx, p_serialNo, r_star, r_content, r_date, r_height, r_weight, r_size) values(17, "MT005", 5, "아주좋아요2", "2022-11-05", 180, 85, 3);
+insert into review(m_idx, p_serialNo, r_star, r_content, r_date, r_height, r_weight, r_size) values(10, "MT005", 5, "아주좋아요2", "2022-11-05", 180, 85, 3);
+insert into review(m_idx, p_serialNo, r_star, r_content, r_date, r_height, r_weight, r_size) values(11, "MT005", 5, "아주좋아요2", "2022-11-05", 180, 85, 3);
+insert into review(m_idx, p_serialNo, r_star, r_content, r_date, r_height, r_weight, r_size) values(12, "MT005", 5, "아주좋아요2", "2022-11-05", 180, 85, 3);
+insert into review(m_idx, p_serialNo, r_star, r_content, r_date, r_height, r_weight, r_size) values(15, "MT001", 5, "아주좋아요2", "2022-11-05", 180, 85, 3);
+insert into review(m_idx, p_serialNo, r_star, r_content, r_date, r_height, r_weight, r_size) values(16, "MT001", 5, "아주좋아요2", "2022-11-05", 180, 85, 3);
+insert into review(m_idx, p_serialNo, r_star, r_content, r_date, r_height, r_weight, r_size) values(17, "MT001", 5, "아주좋아요2", "2022-11-05", 180, 85, 3);
+insert into review(m_idx, p_serialNo, r_star, r_content, r_date, r_height, r_weight, r_size) values(17, "MT005", 5, "아주좋아요2", "2022-11-05", 180, 85, 3);
+insert into review(m_idx, p_serialNo, r_star, r_content, r_date, r_height, r_weight, r_size) values(10, "MT005", 5, "아주좋아요2", "2022-11-05", 180, 85, 3);
+insert into review(m_idx, p_serialNo, r_star, r_content, r_date, r_height, r_weight, r_size) values(11, "MT005", 5, "아주좋아요2", "2022-11-05", 180, 85, 3);
+insert into review(m_idx, p_serialNo, r_star, r_content, r_date, r_height, r_weight, r_size) values(12, "MT005", 5, "아주좋아요2", "2022-11-05", 180, 85, 3);
+insert into review(m_idx, p_serialNo, r_star, r_content, r_date, r_height, r_weight, r_size) values(15, "MT001", 5, "아주좋아요2", "2022-11-05", 180, 85, 3);
+insert into review(m_idx, p_serialNo, r_star, r_content, r_date, r_height, r_weight, r_size) values(16, "MT001", 5, "아주좋아요2", "2022-11-05", 180, 85, 3);
+insert into review(m_idx, p_serialNo, r_star, r_content, r_date, r_height, r_weight, r_size) values(17, "MT001", 5, "아주좋아요2", "2022-11-05", 180, 85, 3);
+insert into review(m_idx, p_serialNo, r_star, r_content, r_date, r_height, r_weight, r_size) values(17, "MT005", 5, "아주좋아요2", "2022-11-05", 180, 85, 3);
+insert into review(m_idx, p_serialNo, r_star, r_content, r_date, r_height, r_weight, r_size) values(11, "MT005", 5, "아주좋아요2", "2022-11-05", 180, 85, 3);
+insert into review(m_idx, p_serialNo, r_star, r_content, r_date, r_height, r_weight, r_size) values(11, "MT005", 5, "아주좋아요2", "2022-11-05", 180, 85, 3);
+insert into review(m_idx, p_serialNo, r_star, r_content, r_date, r_height, r_weight, r_size) values(12, "MT010", 5, "아주좋아요2", "2022-11-05", 180, 85, 3);
+insert into review(m_idx, p_serialNo, r_star, r_content, r_date, r_height, r_weight, r_size) values(15, "MT010", 5, "아주좋아요2", "2022-11-05", 180, 85, 3);
+insert into review(m_idx, p_serialNo, r_star, r_content, r_date, r_height, r_weight, r_size) values(16, "MT010", 5, "아주좋아요2", "2022-11-05", 180, 85, 3);
+insert into review(m_idx, p_serialNo, r_star, r_content, r_date, r_height, r_weight, r_size) values(17, "MT010", 5, "아주좋아요2", "2022-11-05", 180, 85, 3);
+insert into review(m_idx, p_serialNo, r_star, r_content, r_date, r_height, r_weight, r_size) values(17, "MT010", 5, "아주좋아요2", "2022-11-05", 180, 85, 3);
+insert into review(m_idx, p_serialNo, r_star, r_content, r_date, r_height, r_weight, r_size) values(10, "MT010", 5, "아주좋아요2", "2022-11-05", 180, 85, 3);
+insert into review(m_idx, p_serialNo, r_star, r_content, r_date, r_height, r_weight, r_size) values(11, "MT010", 5, "아주좋아요2", "2022-11-05", 180, 85, 3);
+insert into review(m_idx, p_serialNo, r_star, r_content, r_date, r_height, r_weight, r_size) values(19, "MT010", 5, "아주좋아요2", "2022-11-05", 180, 85, 3);
+insert into review(m_idx, p_serialNo, r_star, r_content, r_date, r_height, r_weight, r_size) values(1, "MT010", 5, "아주좋아요2", "2022-11-05", 180, 85, 3);
+insert into review(m_idx, p_serialNo, r_star, r_content, r_date, r_height, r_weight, r_size) values(16, "MT010", 5, "아주좋아요2", "2022-11-05", 180, 85, 3);
+insert into review(m_idx, p_serialNo, r_star, r_content, r_date, r_height, r_weight, r_size) values(7, "MT010", 5, "아주좋아요2", "2022-11-05", 180, 85, 3);
+
+select * from product_img;
+
+insert into product_img(p_no, p_serialNo, p_productImg) values(1, "MT001", "/img/product_list/man/top/top1_1.jpg");
+insert into product_img(p_serialNo, p_productImg) values("MT001", "/img/product_list/man/top/top1_2.jpg");
+insert into product_img(p_serialNo, p_productImg) values("MT002", "/img/product_list/man/top/top2_1.jpg");
+insert into product_img(p_serialNo, p_productImg) values("MT002", "/img/product_list/man/top/top2_2.jpg");
+insert into product_img(p_serialNo, p_productImg) values("MT003", "/img/product_list/man/top/top3_1.jpg");
+insert into product_img(p_serialNo, p_productImg) values("MT003", "/img/product_list/man/top/top3_2.jpg");
+insert into product_img(p_serialNo, p_productImg) values("MT004", "/img/product_list/man/top/top4_1.jpg");
+insert into product_img(p_serialNo, p_productImg) values("MT004", "/img/product_list/man/top/top4_2.jpg");
+insert into product_img(p_serialNo, p_productImg) values("MT005", "/img/product_list/man/top/top5_1.jpg");
+insert into product_img(p_serialNo, p_productImg) values("MT005", "/img/product_list/man/top/top5_2.jpg");
+insert into product_img(p_serialNo, p_productImg) values("MT006", "/img/product_list/man/top/top6_1.jpg");
+insert into product_img(p_serialNo, p_productImg) values("MT006", "/img/product_list/man/top/top6_2.jpg");
+insert into product_img(p_serialNo, p_productImg) values("MT007", "/img/product_list/man/top/top7_1.jpg");
+insert into product_img(p_serialNo, p_productImg) values("MT007", "/img/product_list/man/top/top7_2.jpg");
+insert into product_img(p_serialNo, p_productImg) values("MT008", "/img/product_list/man/top/top8_1.jpg");
+insert into product_img(p_serialNo, p_productImg) values("MT008", "/img/product_list/man/top/top8_2.jpg");
+insert into product_img(p_serialNo, p_productImg) values("MT009", "/img/product_list/man/top/top9_1.jpg");
+insert into product_img(p_serialNo, p_productImg) values("MT009", "/img/product_list/man/top/top9_2.jpg");
+insert into product_img(p_serialNo, p_productImg) values("MT010", "/img/product_list/man/top/top10_1.jpg");
+insert into product_img(p_serialNo, p_productImg) values("MT010", "/img/product_list/man/top/top10_2.jpg");
+
+insert into product_img(p_serialNo, p_productImg) values("MB001", "/img/product_list/man/bottom/bot1_1.jpg");
+insert into product_img(p_serialNo, p_productImg) values("MB001", "/img/product_list/man/bottom/bot1_2.jpg");
+insert into product_img(p_serialNo, p_productImg) values("MB002", "/img/product_list/man/bottom/bot2_1.jpg");
+insert into product_img(p_serialNo, p_productImg) values("MB002", "/img/product_list/man/bottom/bot2_2.jpg");
+insert into product_img(p_serialNo, p_productImg) values("MB003", "/img/product_list/man/bottom/bot3_1.jpg");
+insert into product_img(p_serialNo, p_productImg) values("MB003", "/img/product_list/man/bottom/bot3_2.jpg");
+insert into product_img(p_serialNo, p_productImg) values("MB004", "/img/product_list/man/bottom/bot4_1.jpg");
+insert into product_img(p_serialNo, p_productImg) values("MB004", "/img/product_list/man/bottom/bot4_2.jpg");
+insert into product_img(p_serialNo, p_productImg) values("MB005", "/img/product_list/man/bottom/bot5_1.jpg");
+insert into product_img(p_serialNo, p_productImg) values("MB005", "/img/product_list/man/bottom/bot5_2.jpg");
+insert into product_img(p_serialNo, p_productImg) values("MB006", "/img/product_list/man/bottom/bot6_1.jpg");
+insert into product_img(p_serialNo, p_productImg) values("MB006", "/img/product_list/man/bottom/bot6_2.jpg");
+insert into product_img(p_serialNo, p_productImg) values("MB007", "/img/product_list/man/bottom/bot7_1.jpg");
+insert into product_img(p_serialNo, p_productImg) values("MB007", "/img/product_list/man/bottom/bot7_2.jpg");
+insert into product_img(p_serialNo, p_productImg) values("MB008", "/img/product_list/man/bottom/bot8_1.jpg");
+insert into product_img(p_serialNo, p_productImg) values("MB008", "/img/product_list/man/bottom/bot8_2.jpg");
+insert into product_img(p_serialNo, p_productImg) values("MB009", "/img/product_list/man/bottom/bot9_1.jpg");
+insert into product_img(p_serialNo, p_productImg) values("MB009", "/img/product_list/man/bottom/bot9_2.jpg");
+insert into product_img(p_serialNo, p_productImg) values("MB010", "/img/product_list/man/bottom/bot10_1.jpg");
+insert into product_img(p_serialNo, p_productImg) values("MB010", "/img/product_list/man/bottom/bot10_2.jpg");
+
+insert into product_img(p_serialNo, p_productImg) values("MI001", "/img/product_list/man/inner/inner1_1.jpg");
+insert into product_img(p_serialNo, p_productImg) values("MI001", "/img/product_list/man/inner/inner1_2.jpg");
+insert into product_img(p_serialNo, p_productImg) values("MI002", "/img/product_list/man/inner/inner2_1.jpg");
+insert into product_img(p_serialNo, p_productImg) values("MI002", "/img/product_list/man/inner/inner2_2.jpg");
+insert into product_img(p_serialNo, p_productImg) values("MI003", "/img/product_list/man/inner/inner3_1.jpg");
+insert into product_img(p_serialNo, p_productImg) values("MI003", "/img/product_list/man/inner/inner3_2.jpg");
+insert into product_img(p_serialNo, p_productImg) values("MI004", "/img/product_list/man/inner/inner4_1.jpg");
+insert into product_img(p_serialNo, p_productImg) values("MI004", "/img/product_list/man/inner/inner4_2.jpg");
+insert into product_img(p_serialNo, p_productImg) values("MI005", "/img/product_list/man/inner/inner5_1.jpg");
+insert into product_img(p_serialNo, p_productImg) values("MI005", "/img/product_list/man/inner/inner5_2.jpg");
+insert into product_img(p_serialNo, p_productImg) values("MI006", "/img/product_list/man/inner/inner6_1.jpg");
+insert into product_img(p_serialNo, p_productImg) values("MI006", "/img/product_list/man/inner/inner6_2.jpg");
+insert into product_img(p_serialNo, p_productImg) values("MI007", "/img/product_list/man/inner/inner7_1.jpg");
+insert into product_img(p_serialNo, p_productImg) values("MI007", "/img/product_list/man/inner/inner7_2.jpg");
+
+
+insert into product_img(p_serialNo, p_productImg) values("MO001", "/img/product_list/man/outer/outer1_1.gif");
+insert into product_img(p_serialNo, p_productImg) values("MO001", "/img/product_list/man/outer/outer1_2.jpg");
+insert into product_img(p_serialNo, p_productImg) values("MO002", "/img/product_list/man/outer/outer2_1.jpg");
+insert into product_img(p_serialNo, p_productImg) values("MO002", "/img/product_list/man/outer/outer2_2.jpg");
+insert into product_img(p_serialNo, p_productImg) values("MO003", "/img/product_list/man/outer/outer3_1.jpg");
+insert into product_img(p_serialNo, p_productImg) values("MO003", "/img/product_list/man/outer/outer3_2.jpg");
+insert into product_img(p_serialNo, p_productImg) values("MO004", "/img/product_list/man/outer/outer4_1.jpg");
+insert into product_img(p_serialNo, p_productImg) values("MO004", "/img/product_list/man/outer/outer4_2.jpg");
+insert into product_img(p_serialNo, p_productImg) values("MO005", "/img/product_list/man/outer/outer5_1.jpg");
+insert into product_img(p_serialNo, p_productImg) values("MO005", "/img/product_list/man/outer/outer5_2.jpg");
+insert into product_img(p_serialNo, p_productImg) values("MO006", "/img/product_list/man/outer/outer6_1.jpg");
+insert into product_img(p_serialNo, p_productImg) values("MO006", "/img/product_list/man/outer/outer6_2.jpg");
+insert into product_img(p_serialNo, p_productImg) values("MO007", "/img/product_list/man/outer/outer7_1.jpg");
+insert into product_img(p_serialNo, p_productImg) values("MO007", "/img/product_list/man/outer/outer7_2.jpg");
+insert into product_img(p_serialNo, p_productImg) values("MO008", "/img/product_list/man/outer/outer8_1.jpg");
+insert into product_img(p_serialNo, p_productImg) values("MO008", "/img/product_list/man/outer/outer8_2.jpg");
+insert into product_img(p_serialNo, p_productImg) values("MO009", "/img/product_list/man/outer/outer9_1.jpg");
+insert into product_img(p_serialNo, p_productImg) values("MO009", "/img/product_list/man/outer/outer9_2.jpg");
+insert into product_img(p_serialNo, p_productImg) values("MO010", "/img/product_list/man/outer/outer10_1.jpg");
+insert into product_img(p_serialNo, p_productImg) values("MO010", "/img/product_list/man/outer/outer10_2.jpg");
+
+insert into product_img(p_serialNo, p_productImg) values("WT001", "/img/product_list/woman/top/w_top_1_1.jpg");
+insert into product_img(p_serialNo, p_productImg) values("WT001", "/img/product_list/woman/top/w_top_1_2.jpg");
+insert into product_img(p_serialNo, p_productImg) values("WT002", "/img/product_list/woman/top/w_top_2_1.jpg");
+insert into product_img(p_serialNo, p_productImg) values("WT002", "/img/product_list/woman/top/w_top_2_2.jpg");
+insert into product_img(p_serialNo, p_productImg) values("WT003", "/img/product_list/woman/top/w_top_3_1.jpg");
+insert into product_img(p_serialNo, p_productImg) values("WT003", "/img/product_list/woman/top/w_top_3_2.jpg");
+insert into product_img(p_serialNo, p_productImg) values("WT004", "/img/product_list/woman/top/w_top_4_1.jpg");
+insert into product_img(p_serialNo, p_productImg) values("WT004", "/img/product_list/woman/top/w_top_4_2.jpg");
+insert into product_img(p_serialNo, p_productImg) values("WT005", "/img/product_list/woman/top/w_top_5_1.jpg");
+insert into product_img(p_serialNo, p_productImg) values("WT005", "/img/product_list/woman/top/w_top_5_2.jpg");
+insert into product_img(p_serialNo, p_productImg) values("WT006", "/img/product_list/woman/top/w_top_6_1.jpg");
+insert into product_img(p_serialNo, p_productImg) values("WT006", "/img/product_list/woman/top/w_top_6_2.jpg");
+insert into product_img(p_serialNo, p_productImg) values("WT007", "/img/product_list/woman/top/w_top_7_1.jpg");
+insert into product_img(p_serialNo, p_productImg) values("WT007", "/img/product_list/woman/top/w_top_7_2.jpg");
+insert into product_img(p_serialNo, p_productImg) values("WT008", "/img/product_list/woman/top/w_top_8_1.jpg");
+insert into product_img(p_serialNo, p_productImg) values("WT008", "/img/product_list/woman/top/w_top_8_2.jpg");
+insert into product_img(p_serialNo, p_productImg) values("WT009", "/img/product_list/woman/top/w_top_9_1.jpg");
+insert into product_img(p_serialNo, p_productImg) values("WT009", "/img/product_list/woman/top/w_top_9_2.jpg");
+insert into product_img(p_serialNo, p_productImg) values("WT010", "/img/product_list/woman/top/w_top_10_1.jpg");
+insert into product_img(p_serialNo, p_productImg) values("WT010", "/img/product_list/woman/top/w_top_10_2.jpg");
+
+insert into product_img(p_serialNo, p_productImg) values("WB001", "/img/product_list/woman/bottom/w_bot_1_1.jpg");
+insert into product_img(p_serialNo, p_productImg) values("WB001", "/img/product_list/woman/bottom/w_bot_1_2.jpg");
+insert into product_img(p_serialNo, p_productImg) values("WB002", "/img/product_list/woman/bottom/w_bot_2_1.jpg");
+insert into product_img(p_serialNo, p_productImg) values("WB002", "/img/product_list/woman/bottom/w_bot_2_2.jpg");
+insert into product_img(p_serialNo, p_productImg) values("WB003", "/img/product_list/woman/bottom/w_bot_3_1.jpg");
+insert into product_img(p_serialNo, p_productImg) values("WB003", "/img/product_list/woman/bottom/w_bot_3_2.jpg");
+insert into product_img(p_serialNo, p_productImg) values("WB004", "/img/product_list/woman/bottom/w_bot_4_1.jpg");
+insert into product_img(p_serialNo, p_productImg) values("WB004", "/img/product_list/woman/bottom/w_bot_4_2.jpg");
+insert into product_img(p_serialNo, p_productImg) values("WB005", "/img/product_list/woman/bottom/w_bot_5_1.jpg");
+insert into product_img(p_serialNo, p_productImg) values("WB005", "/img/product_list/woman/bottom/w_bot_5_2.jpg");
+insert into product_img(p_serialNo, p_productImg) values("WB006", "/img/product_list/woman/bottom/w_bot_6_1.jpg");
+insert into product_img(p_serialNo, p_productImg) values("WB006", "/img/product_list/woman/bottom/w_bot_6_2.jpg");
+insert into product_img(p_serialNo, p_productImg) values("WB007", "/img/product_list/woman/bottom/w_bot_7_1.jpg");
+insert into product_img(p_serialNo, p_productImg) values("WB007", "/img/product_list/woman/bottom/w_bot_7_2.jpg");
+insert into product_img(p_serialNo, p_productImg) values("WB008", "/img/product_list/woman/bottom/w_bot_8_1.jpg");
+insert into product_img(p_serialNo, p_productImg) values("WB008", "/img/product_list/woman/bottom/w_bot_8_2.jpg");
+insert into product_img(p_serialNo, p_productImg) values("WB009", "/img/product_list/woman/bottom/w_bot_9_1.jpg");
+insert into product_img(p_serialNo, p_productImg) values("WB009", "/img/product_list/woman/bottom/w_bot_9_2.jpg");
+insert into product_img(p_serialNo, p_productImg) values("WB010", "/img/product_list/woman/bottom/w_bot_10_1.jpg");
+insert into product_img(p_serialNo, p_productImg) values("WB010", "/img/product_list/woman/bottom/w_bot_10_2.jpg");
+
+insert into product_img(p_serialNo, p_productImg) values("WI001", "/img/product_list/woman/inner/w_inner_1_1.jpg");
+insert into product_img(p_serialNo, p_productImg) values("WI001", "/img/product_list/woman/inner/w_inner_1_2.jpg");
+insert into product_img(p_serialNo, p_productImg) values("WI002", "/img/product_list/woman/inner/w_inner_2_1.jpg");
+insert into product_img(p_serialNo, p_productImg) values("WI002", "/img/product_list/woman/inner/w_inner_2_2.jpg");
+insert into product_img(p_serialNo, p_productImg) values("WI003", "/img/product_list/woman/inner/w_inner_3_1.jpg");
+insert into product_img(p_serialNo, p_productImg) values("WI003", "/img/product_list/woman/inner/w_inner_3_2.jpg");
+insert into product_img(p_serialNo, p_productImg) values("WI004", "/img/product_list/woman/inner/w_inner_4_1.jpg");
+insert into product_img(p_serialNo, p_productImg) values("WI004", "/img/product_list/woman/inner/w_inner_4_2.jpg");
+insert into product_img(p_serialNo, p_productImg) values("WI005", "/img/product_list/woman/inner/w_inner_5_1.jpg");
+insert into product_img(p_serialNo, p_productImg) values("WI005", "/img/product_list/woman/inner/w_inner_5_2.jpg");
+insert into product_img(p_serialNo, p_productImg) values("WI006", "/img/product_list/woman/inner/w_inner_6_1.jpg");
+insert into product_img(p_serialNo, p_productImg) values("WI006", "/img/product_list/woman/inner/w_inner_6_2.jpg");
+insert into product_img(p_serialNo, p_productImg) values("WI007", "/img/product_list/woman/inner/w_inner_7_1.jpg");
+insert into product_img(p_serialNo, p_productImg) values("WI007", "/img/product_list/woman/inner/w_inner_7_2.jpg");
+insert into product_img(p_serialNo, p_productImg) values("WI008", "/img/product_list/woman/inner/w_inner_8_1.jpg");
+insert into product_img(p_serialNo, p_productImg) values("WI008", "/img/product_list/woman/inner/w_inner_8_2.jpg");
+insert into product_img(p_serialNo, p_productImg) values("WI009", "/img/product_list/woman/inner/w_inner_9_1.jpg");
+insert into product_img(p_serialNo, p_productImg) values("WI009", "/img/product_list/woman/inner/w_inner_9_2.jpg");
+insert into product_img(p_serialNo, p_productImg) values("WI010", "/img/product_list/woman/inner/w_inner_10_1.jpg");
+insert into product_img(p_serialNo, p_productImg) values("WI010", "/img/product_list/woman/inner/w_inner_10_2.jpg");
+
+insert into product_img(p_serialNo, p_productImg) values("WO001", "/img/product_list/woman/outer/w_outer_1_1.jpg");
+insert into product_img(p_serialNo, p_productImg) values("WO001", "/img/product_list/woman/outer/w_outer_1_2.jpg");
+insert into product_img(p_serialNo, p_productImg) values("WO002", "/img/product_list/woman/outer/w_outer_2_1.jpg");
+insert into product_img(p_serialNo, p_productImg) values("WO002", "/img/product_list/woman/outer/w_outer_2_2.jpg");
+insert into product_img(p_serialNo, p_productImg) values("WO003", "/img/product_list/woman/outer/w_outer_3_1.jpg");
+insert into product_img(p_serialNo, p_productImg) values("WO003", "/img/product_list/woman/outer/w_outer_3_2.jpg");
+insert into product_img(p_serialNo, p_productImg) values("WO004", "/img/product_list/woman/outer/w_outer_4_1.jpg");
+insert into product_img(p_serialNo, p_productImg) values("WO004", "/img/product_list/woman/outer/w_outer_4_2.jpg");
+insert into product_img(p_serialNo, p_productImg) values("WO005", "/img/product_list/woman/outer/w_outer_5_1.jpg");
+insert into product_img(p_serialNo, p_productImg) values("WO005", "/img/product_list/woman/outer/w_outer_5_2.jpg");
+insert into product_img(p_serialNo, p_productImg) values("WO006", "/img/product_list/woman/outer/w_outer_6_1.jpg");
+insert into product_img(p_serialNo, p_productImg) values("WO006", "/img/product_list/woman/outer/w_outer_6_2.jpg");
+insert into product_img(p_serialNo, p_productImg) values("WO007", "/img/product_list/woman/outer/w_outer_7_1.jpg");
+insert into product_img(p_serialNo, p_productImg) values("WO007", "/img/product_list/woman/outer/w_outer_7_2.jpg");
+insert into product_img(p_serialNo, p_productImg) values("WO008", "/img/product_list/woman/outer/w_outer_8_1.jpg");
+insert into product_img(p_serialNo, p_productImg) values("WO008", "/img/product_list/woman/outer/w_outer_8_2.jpg");
+insert into product_img(p_serialNo, p_productImg) values("WO009", "/img/product_list/woman/outer/w_outer_9_1.jpg");
+insert into product_img(p_serialNo, p_productImg) values("WO009", "/img/product_list/woman/outer/w_outer_9_2.jpg");
+insert into product_img(p_serialNo, p_productImg) values("WO010", "/img/product_list/woman/outer/w_outer_10_1.jpg");
+insert into product_img(p_serialNo, p_productImg) values("WO010", "/img/product_list/woman/outer/w_outer_10_2.jpg");
+
+insert into product_img(p_serialNo, p_productImg) values("GT001", "/img/product_list/golf/top/top1_1.jpg");
+insert into product_img(p_serialNo, p_productImg) values("GT001", "/img/product_list/golf/top/top1_2.jpg");
+insert into product_img(p_serialNo, p_productImg) values("GT002", "/img/product_list/golf/top/top2_1.jpg");
+insert into product_img(p_serialNo, p_productImg) values("GT002", "/img/product_list/golf/top/top2_2.jpg");
+insert into product_img(p_serialNo, p_productImg) values("GT003", "/img/product_list/golf/top/top3_1.jpg");
+insert into product_img(p_serialNo, p_productImg) values("GT003", "/img/product_list/golf/top/top3_2.jpg");
+insert into product_img(p_serialNo, p_productImg) values("GT004", "/img/product_list/golf/top/top4_1.jpg");
+insert into product_img(p_serialNo, p_productImg) values("GT004", "/img/product_list/golf/top/top4_2.jpg");
+insert into product_img(p_serialNo, p_productImg) values("GT005", "/img/product_list/golf/top/top5_1.jpg");
+insert into product_img(p_serialNo, p_productImg) values("GT005", "/img/product_list/golf/top/top5_2.jpg");
+insert into product_img(p_serialNo, p_productImg) values("GT006", "/img/product_list/golf/top/top6_1.jpg");
+insert into product_img(p_serialNo, p_productImg) values("GT006", "/img/product_list/golf/top/top6_2.jpg");
+insert into product_img(p_serialNo, p_productImg) values("GT007", "/img/product_list/golf/top/top7_1.jpg");
+insert into product_img(p_serialNo, p_productImg) values("GT007", "/img/product_list/golf/top/top7_2.jpg");
+insert into product_img(p_serialNo, p_productImg) values("GT008", "/img/product_list/golf/top/top8_1.jpg");
+insert into product_img(p_serialNo, p_productImg) values("GT008", "/img/product_list/golf/top/top8_2.jpg");
+insert into product_img(p_serialNo, p_productImg) values("GT009", "/img/product_list/golf/top/top9_1.jpg");
+insert into product_img(p_serialNo, p_productImg) values("GT009", "/img/product_list/golf/top/top9_2.jpg");
+insert into product_img(p_serialNo, p_productImg) values("GT010", "/img/product_list/golf/top/top10_1.jpg");
+insert into product_img(p_serialNo, p_productImg) values("GT010", "/img/product_list/golf/top/top10_2.jpg");
+
+insert into product_img(p_serialNo, p_productImg) values("GB001", "/img/product_list/golf/bottom/bot1_1.jpg");
+insert into product_img(p_serialNo, p_productImg) values("GB001", "/img/product_list/golf/bottom/bot1_2.jpg");
+insert into product_img(p_serialNo, p_productImg) values("GB002", "/img/product_list/golf/bottom/bot2_1.jpg");
+insert into product_img(p_serialNo, p_productImg) values("GB002", "/img/product_list/golf/bottom/bot2_2.jpg");
+insert into product_img(p_serialNo, p_productImg) values("GB003", "/img/product_list/golf/bottom/bot3_1.jpg");
+insert into product_img(p_serialNo, p_productImg) values("GB003", "/img/product_list/golf/bottom/bot3_2.jpg");
+insert into product_img(p_serialNo, p_productImg) values("GB004", "/img/product_list/golf/bottom/bot4_1.jpg");
+insert into product_img(p_serialNo, p_productImg) values("GB004", "/img/product_list/golf/bottom/bot4_2.jpg");
+insert into product_img(p_serialNo, p_productImg) values("GB005", "/img/product_list/golf/bottom/bot5_1.jpg");
+insert into product_img(p_serialNo, p_productImg) values("GB005", "/img/product_list/golf/bottom/bot5_2.jpg");
+insert into product_img(p_serialNo, p_productImg) values("GB006", "/img/product_list/golf/bottom/bot6_1.jpg");
+insert into product_img(p_serialNo, p_productImg) values("GB006", "/img/product_list/golf/bottom/bot6_2.jpg");
+insert into product_img(p_serialNo, p_productImg) values("GB007", "/img/product_list/golf/bottom/bot7_1.jpg");
+insert into product_img(p_serialNo, p_productImg) values("GB007", "/img/product_list/golf/bottom/bot7_2.jpg");
+insert into product_img(p_serialNo, p_productImg) values("GB008", "/img/product_list/golf/bottom/bot8_1.jpg");
+insert into product_img(p_serialNo, p_productImg) values("GB008", "/img/product_list/golf/bottom/bot8_2.jpg");
+insert into product_img(p_serialNo, p_productImg) values("GB009", "/img/product_list/golf/bottom/bot9_1.jpg");
+insert into product_img(p_serialNo, p_productImg) values("GB009", "/img/product_list/golf/bottom/bot9_2.jpg");
+insert into product_img(p_serialNo, p_productImg) values("GB010", "/img/product_list/golf/bottom/bot10_1.jpg");
+insert into product_img(p_serialNo, p_productImg) values("GB010", "/img/product_list/golf/bottom/bot10_2.jpg");
+
+insert into product_img(p_serialNo, p_productImg) values("KT001", "/img/product_list/kids/top/k_top_1_1.jpg");
+insert into product_img(p_serialNo, p_productImg) values("KT001", "/img/product_list/kids/top/k_top_1_2.jpg");
+insert into product_img(p_serialNo, p_productImg) values("KT002", "/img/product_list/kids/top/k_top_2_1.jpg");
+insert into product_img(p_serialNo, p_productImg) values("KT002", "/img/product_list/kids/top/k_top_2_2.jpg");
+insert into product_img(p_serialNo, p_productImg) values("KT003", "/img/product_list/kids/top/k_top_3_1.jpg");
+insert into product_img(p_serialNo, p_productImg) values("KT003", "/img/product_list/kids/top/k_top_3_2.jpg");
+insert into product_img(p_serialNo, p_productImg) values("KT004", "/img/product_list/kids/top/k_top_4_1.jpg");
+insert into product_img(p_serialNo, p_productImg) values("KT004", "/img/product_list/kids/top/k_top_4_2.jpg");
+insert into product_img(p_serialNo, p_productImg) values("KT005", "/img/product_list/kids/top/k_top_5_1.jpg");
+insert into product_img(p_serialNo, p_productImg) values("KT005", "/img/product_list/kids/top/k_top_5_2.jpg");
+insert into product_img(p_serialNo, p_productImg) values("KT006", "/img/product_list/kids/top/k_top_6_1.jpg");
+insert into product_img(p_serialNo, p_productImg) values("KT006", "/img/product_list/kids/top/k_top_6_2.jpg");
+insert into product_img(p_serialNo, p_productImg) values("KT007", "/img/product_list/kids/top/k_top_7_1.jpg");
+insert into product_img(p_serialNo, p_productImg) values("KT007", "/img/product_list/kids/top/k_top_7_2.jpg");
+insert into product_img(p_serialNo, p_productImg) values("KT008", "/img/product_list/kids/top/k_top_8_1.jpg");
+insert into product_img(p_serialNo, p_productImg) values("KT008", "/img/product_list/kids/top/k_top_8_2.jpg");
+insert into product_img(p_serialNo, p_productImg) values("KT009", "/img/product_list/kids/top/k_top_9_1.jpg");
+insert into product_img(p_serialNo, p_productImg) values("KT009", "/img/product_list/kids/top/k_top_9_2.jpg");
+insert into product_img(p_serialNo, p_productImg) values("KT010", "/img/product_list/kids/top/k_top_10_1.jpg");
+insert into product_img(p_serialNo, p_productImg) values("KT010", "/img/product_list/kids/top/k_top_10_2.jpg");
+
+insert into product_img(p_serialNo, p_productImg) values("KB001", "/img/product_list/kids/bottom/k_bot_1_1.jpg");
+insert into product_img(p_serialNo, p_productImg) values("KB001", "/img/product_list/kids/bottom/k_bot_1_2.jpg");
+insert into product_img(p_serialNo, p_productImg) values("KB002", "/img/product_list/kids/bottom/k_bot_2_1.jpg");
+insert into product_img(p_serialNo, p_productImg) values("KB002", "/img/product_list/kids/bottom/k_bot_2_2.jpg");
+insert into product_img(p_serialNo, p_productImg) values("KB003", "/img/product_list/kids/bottom/k_bot_3_1.jpg");
+insert into product_img(p_serialNo, p_productImg) values("KB003", "/img/product_list/kids/bottom/k_bot_3_2.jpg");
+insert into product_img(p_serialNo, p_productImg) values("KB004", "/img/product_list/kids/bottom/k_bot_4_1.jpg");
+insert into product_img(p_serialNo, p_productImg) values("KB004", "/img/product_list/kids/bottom/k_bot_4_2.jpg");
+insert into product_img(p_serialNo, p_productImg) values("KB005", "/img/product_list/kids/bottom/k_bot_5_1.jpg");
+insert into product_img(p_serialNo, p_productImg) values("KB005", "/img/product_list/kids/bottom/k_bot_5_2.jpg");
+insert into product_img(p_serialNo, p_productImg) values("KB006", "/img/product_list/kids/bottom/k_bot_6_1.jpg");
+insert into product_img(p_serialNo, p_productImg) values("KB006", "/img/product_list/kids/bottom/k_bot_6_2.jpg");
+insert into product_img(p_serialNo, p_productImg) values("KB007", "/img/product_list/kids/bottom/k_bot_7_1.jpg");
+insert into product_img(p_serialNo, p_productImg) values("KB007", "/img/product_list/kids/bottom/k_bot_7_2.jpg");
+insert into product_img(p_serialNo, p_productImg) values("KB008", "/img/product_list/kids/bottom/k_bot_8_1.jpg");
+insert into product_img(p_serialNo, p_productImg) values("KB008", "/img/product_list/kids/bottom/k_bot_8_2.jpg");
+insert into product_img(p_serialNo, p_productImg) values("KB009", "/img/product_list/kids/bottom/k_bot_9_1.jpg");
+insert into product_img(p_serialNo, p_productImg) values("KB009", "/img/product_list/kids/bottom/k_bot_9_2.jpg");
+insert into product_img(p_serialNo, p_productImg) values("KB010", "/img/product_list/kids/bottom/k_bot_10_1.jpg");
+insert into product_img(p_serialNo, p_productImg) values("KB010", "/img/product_list/kids/bottom/k_bot_10_2.jpg");
+
+
+select * from product_cart;
+insert into product_cart(m_id, p_serialNo, p_choiceQuantity, p_choiceSize, p_choiceColor) values("asdf", "MT001", 3, "XL", "black");
+insert into product_cart(m_id, p_serialNo, p_choiceQuantity, p_choiceSize, p_choiceColor) values("asdf", "GT001", 1, "M", "black");
+insert into product_cart(m_id, p_serialNo, p_choiceQuantity, p_choiceSize, p_choiceColor) values("asdf", "MT001", 1, "L", "black");
+insert into product_cart(m_id, p_serialNo, p_choiceQuantity, p_choiceSize, p_choiceColor) values("asdf", "MO001", 1, "S", "black");
+insert into product_cart(m_id, p_serialNo, p_choiceQuantity, p_choiceSize, p_choiceColor) values("asdf", "KB001", 1, "S", "black");
+insert into product_cart(m_id, p_serialNo, p_choiceQuantity, p_choiceSize, p_choiceColor) values("asdf", "WO001", 1, "L", "black");
+
+
+-- 주문내역tb 삽입
+insert into orders(p_invoice, m_id, p_orderDate, p_serialNo, p_orderStatus, p_buyQuantity, p_buyColor, p_buySize, p_price, p_buySubtotal)
+values(1, "asdf", date_format(now(), "%Y-%m-%d"), "MT001", "결제완료", 3, "black", "XL", 40000, 120000);
+insert into orders(p_invoice, m_id, p_orderDate, p_serialNo, p_orderStatus, p_buyQuantity, p_buyColor, p_buySize, p_price, p_buySubtotal)
+values(1, "asdf", date_format(now(), "%Y-%m-%d"), "GT001", "결제완료", 1, "black", "M", 40000, 40000);
+insert into orders(p_invoice, m_id, p_orderDate, p_serialNo, p_orderStatus, p_buyQuantity, p_buyColor, p_buySize, p_price, p_buySubtotal)
+values(1, "asdf", date_format(now(), "%Y-%m-%d"), "MT001", "결제완료", 1, "black", "L", 40000, 40000);
+select * from orders;
+
+insert into orders(p_invoice, m_id, p_orderDate, p_serialNo, p_orderStatus, p_buyQuantity, p_buyColor, p_buySize, p_price, p_buySubtotal)
+values(2, "asdf", date_format(now(), "%Y-%m-%d"), "MT002", "결제완료", 3, "black", "XL", 40000, 120000);
+insert into orders(p_invoice, m_id, p_orderDate, p_serialNo, p_orderStatus, p_buyQuantity, p_buyColor, p_buySize, p_price, p_buySubtotal)
+values(2, "asdf", date_format(now(), "%Y-%m-%d"), "GT002", "결제완료", 1, "black", "M", 40000, 40000);
+insert into orders(p_invoice, m_id, p_orderDate, p_serialNo, p_orderStatus, p_buyQuantity, p_buyColor, p_buySize, p_price, p_buySubtotal)
+values(2, "asdf", date_format(now(), "%Y-%m-%d"), "MT002", "결제완료", 1, "black", "L", 40000, 40000);
+select * from orders;
+
+
+-- 배송지tb 삽입
+truncate table address;
+insert into address(m_id, p_name, p_cell, p_email, p_homeAddr, p_deliveryName, p_deliveryCell1, p_deliveryCell2, p_zipCode, p_destination1, p_destination2, p_deliveryMessage, p_totalPrice, p_deliveryPrice, p_pay, p_buyDate)
+values("asdf", "김도현", "010-1234-1234", "rla@naver.com", 1, "김도현", "010-1234-1234", "010-1234-1234", 16595, "경기도1", "수원시1-좋은아파트", "안전배송!", 200000, 2500, 0, date_format(now(), "%Y-%m-%d"));
+insert into address(m_id, p_name, p_cell, p_email, p_homeAddr, p_deliveryName, p_deliveryCell1, p_deliveryCell2, p_zipCode, p_destination1, p_destination2, p_deliveryMessage, p_totalPrice, p_deliveryPrice, p_pay, p_buyDate)
+values("asdf", "김도현", "010-1234-1234", "rla@naver.com", 1, "김도현", "010-4321-4321", "010-4321-4321", 16595, "경기도2", "수원시2-좋은아파트", "안전배송!", 200000, 2500, 0, date_format(now(), "%Y-%m-%d"));
+select * from address;
+
+
+
+truncate product;
+insert into product values("MT001", "라운드셔츠1_1+1", 0, 10000, "2023-11-29", 1150, 1150, 1);
+insert into product values("MT002", "라운드셔츠2_1+1", 0, 20000, "2023-10-10", 1151, 1153, 1);
+insert into product values("MT003", "라운드셔츠3_1+1", 0, 30000, "2023-08-19", 1154, 1154, 1);
+insert into product values("MT004", "라운드셔츠4_1+1", 0, 40000, "2023-07-29", 1155, 1154, 1);
+insert into product values("MT005", "라운드셔츠5_1+1", 0, 50000, "2023-10-15", 1156, 1156, 1);
+insert into product values("MT006", "라운드셔츠6", 0, 60000, "2000-11-25", 1157, 1156, 1);
+insert into product values("MT007", "라운드셔츠7", 0, 70000, "2000-11-19", 1158, 1157, 1);
+insert into product values("MT008", "라운드셔츠8", 0, 80000, "2000-11-15", 1159, 1158, 1);
+insert into product values("MT009", "라운드셔츠9", 0, 90000, "2000-11-10", 1160, 1159, 1);
+insert into product values("MT010", "라운드셔츠10", 0, 100000, "2000-11-03", 1156, 1156, 1);
+
+insert into product values("MB001", "조거팬츠1_1+1", 0, 40000, "2022-11-29", 11, 100, 1);
+insert into product values("MB002", "조거팬츠2_1+1", 0, 40000, "2022-10-10", 21, 80, 1);
+insert into product values("MB003", "조거팬츠3_1+1", 0, 40000, "2022-08-19", 75, 1100, 1);
+insert into product values("MB004", "조거팬츠4_1+1", 0, 40000, "2022-07-29", 48, 1, 1);
+insert into product values("MB005", "조거팬츠5_1+1", 0, 40000, "2022-10-15", 22, 200, 1);
+insert into product values("MB006", "조거팬츠6", 0, 40000, "2022-11-25", 5, 2, 1);
+insert into product values("MB007", "조거팬츠7", 0, 40000, "2022-11-19", 56, 30, 1);
+insert into product values("MB008", "조거팬츠8", 0, 40000, "2022-11-15", 550, 19, 1);
+insert into product values("MB009", "조거팬츠9", 0, 40000, "2022-11-10", 540, 67, 1);
+insert into product values("MB010", "조거팬츠10", 0, 40000, "2022-11-03", 150, 78, 1);
+
+insert into product values("MI001", "에어드로즈1_1+1", 0, 40000, "2022-11-29", 11, 100, 1);
+insert into product values("MI002", "에어드로즈2_1+1", 0, 40000, "2022-10-10", 21, 80, 1);
+insert into product values("MI003", "에어드로즈3_1+1", 0, 40000, "2022-08-19", 75, 1100, 1);
+insert into product values("MI004", "에어드로즈4_1+1", 0, 40000, "2022-07-29", 48, 1, 1);
+insert into product values("MI005", "에어드로즈5_1+1", 0, 40000, "2022-10-15", 22, 200, 1);
+insert into product values("MI006", "에어드로즈6", 0, 40000, "2022-11-25", 5, 2, 1);
+insert into product values("MI007", "에어드로즈7", 0, 40000, "2022-11-19", 56, 30, 1);
+
+insert into product values("MO001", "플리스코트1", 0, 40000, "2022-11-29", 100, 100, 1);
+insert into product values("MO002", "플리스코트2", 0, 40000, "2022-10-10", 21, 80, 1);
+insert into product values("MO003", "플리스코트3", 0, 40000, "2022-08-19", 75, 1100, 1);
+insert into product values("MO004", "플리스코트4", 0, 40000, "2022-07-29", 48, 1, 1);
+insert into product values("MO005", "플리스코트5", 0, 40000, "2022-10-15", 22, 200, 1);
+insert into product values("MO006", "플리스코트6", 0, 40000, "2022-11-25", 5, 2, 1);
+insert into product values("MO007", "플리스코트7", 0, 40000, "2022-11-19", 56, 30, 1);
+insert into product values("MO008", "플리스코트8", 0, 40000, "2022-11-15", 550, 19, 1);
+insert into product values("MO009", "플리스코트9", 0, 40000, "2022-11-10", 540, 67, 1);
+insert into product values("MO010", "플리스코트10", 0, 40000, "2022-11-03", 150, 78, 1);
+
+insert into product values("WT001", "집업자켓1_아울렛", 0, 34000, "2023-11-29", 2101, 2101, 1);
+insert into product values("WT002", "집업자켓2_아울렛", 0, 44000, "2023-10-10", 2101, 2102, 1);
+insert into product values("WT003", "집업자켓3_아울렛", 0, 53000, "2023-08-19", 2102, 2103, 1);
+insert into product values("WT004", "집업자켓4_아울렛", 0, 21000, "2023-07-29", 2106, 2107, 1);
+insert into product values("WT005", "집업자켓5_아울렛", 0, 70000, "2023-10-15", 2108, 2200, 1);
+insert into product values("WT006", "집업자켓6", 0, 40000, "2022-11-25", 5, 2, 1);
+insert into product values("WT007", "집업자켓7", 0, 40000, "2022-11-19", 56, 30, 1);
+insert into product values("WT008", "집업자켓8", 0, 40000, "2000-11-15", 550, 19, 1);
+insert into product values("WT009", "집업자켓9", 0, 40000, "2000-11-10", 540, 67, 1);
+insert into product values("WT010", "집업자켓10", 0, 40000, "2000-11-03", 150, 78, 1);
+
+insert into product values("WB001", "부츠컷팬츠1", 0, 40000, "2022-11-29", 11, 100, 1);
+insert into product values("WB002", "부츠컷팬츠2", 0, 40000, "2022-10-10", 21, 80, 1);
+insert into product values("WB003", "부츠컷팬츠3", 0, 40000, "2022-08-19", 75, 1100, 1);
+insert into product values("WB004", "부츠컷팬츠4", 0, 40000, "2022-07-29", 48, 1, 1);
+insert into product values("WB005", "부츠컷팬츠5", 0, 40000, "2022-10-15", 22, 200, 1);
+insert into product values("WB006", "부츠컷팬츠6", 0, 40000, "2022-11-25", 5, 2, 1);
+insert into product values("WB007", "부츠컷팬츠7", 0, 40000, "2022-11-19", 56, 30, 1);
+insert into product values("WB008", "부츠컷팬츠8", 0, 40000, "2022-11-15", 550, 19, 1);
+insert into product values("WB009", "부츠컷팬츠9", 0, 40000, "2022-11-10", 540, 67, 1);
+insert into product values("WB010", "부츠컷팬츠10", 0, 40000, "2022-11-03", 150, 78, 1);
+
+insert into product values("WO001", "베스트크리미1_아울렛", 0, 40000, "2022-11-29", 11, 100, 1);
+insert into product values("WO002", "베스트크리미2_아울렛", 0, 40000, "2022-10-10", 21, 80, 1);
+insert into product values("WO003", "베스트크리미3_아울렛", 0, 40000, "2022-08-19", 75, 1100, 1);
+insert into product values("WO004", "베스트크리미4_아울렛", 0, 40000, "2022-07-29", 48, 1, 1);
+insert into product values("WO005", "베스트크리미5_아울렛", 0, 40000, "2022-10-15", 22, 200, 1);
+insert into product values("WO006", "베스트크리미6", 0, 40000, "2022-11-25", 5, 2, 1);
+insert into product values("WO007", "베스트크리미7", 0, 40000, "2022-11-19", 56, 30, 1);
+insert into product values("WO008", "베스트크리미8", 0, 40000, "2022-11-15", 550, 19, 1);
+insert into product values("WO009", "베스트크리미9", 0, 40000, "2022-11-10", 540, 67, 1);
+insert into product values("WO010", "베스트크리미10", 0, 40000, "2022-11-03", 150, 78, 1);
+
+insert into product values("WI001", "심리스드로우1", 0, 40000, "2022-11-29", 11, 100, 1);
+insert into product values("WI002", "심리스드로우2", 0, 40000, "2022-10-10", 21, 80, 1);
+insert into product values("WI003", "심리스드로우3", 0, 40000, "2022-08-19", 75, 1100, 1);
+insert into product values("WI004", "심리스드로우4", 0, 40000, "2022-07-29", 48, 1, 1);
+insert into product values("WI005", "심리스드로우5", 0, 40000, "2022-10-15", 22, 200, 1);
+insert into product values("WI006", "심리스드로우6", 0, 40000, "2022-11-25", 5, 2, 1);
+insert into product values("WI007", "심리스드로우7", 0, 40000, "2022-11-19", 56, 30, 1);
+insert into product values("WI008", "심리스드로우8", 0, 40000, "2022-11-15", 550, 19, 1);
+insert into product values("WI009", "심리스드로우9", 0, 40000, "2022-11-10", 540, 67, 1);
+insert into product values("WI010", "심리스드로우10", 0, 40000, "2022-11-03", 150, 78, 1);
+
+insert into product values("KT001", "플레이기모1", 0, 11000, "2023-11-29", 1605, 1605, 1);
+insert into product values("KT002", "플레이기모2", 0, 22000, "2023-10-10", 1605, 1605, 1);
+insert into product values("KT003", "플레이기모3", 0, 33000, "2023-08-19", 4042, 1103, 1);
+insert into product values("KT004", "플레이기모4", 0, 44000, "2023-07-29", 1605, 3000, 1);
+insert into product values("KT005", "플레이기모5", 0, 55000, "2023-10-15", 3165, 3200, 1);
+insert into product values("KT006", "플레이기모6", 0, 40000, "2000-11-25", 5, 2, 1);
+insert into product values("KT007", "플레이기모7", 0, 40000, "2000-11-19", 56, 30, 1);
+insert into product values("KT008", "플레이기모8", 0, 40000, "2000-11-15", 550, 19, 1);
+insert into product values("KT009", "플레이기모9", 0, 40000, "2000-11-10", 540, 67, 1);
+insert into product values("KT010", "플레이기모10", 0, 40000, "2000-11-03", 150, 78, 1);
+
+insert into product values("KB001", "패딩팬츠1", 0, 40000, "2022-11-29", 11, 100, 1);
+insert into product values("KB002", "패딩팬츠2", 0, 40000, "2022-10-10", 21, 80, 1);
+insert into product values("KB003", "패딩팬츠3", 0, 40000, "2022-08-19", 75, 1100, 1);
+insert into product values("KB004", "패딩팬츠4", 0, 40000, "2022-07-29", 48, 1, 1);
+insert into product values("KB005", "패딩팬츠5", 0, 40000, "2022-10-15", 22, 200, 1);
+insert into product values("KB006", "패딩팬츠6", 0, 40000, "2022-11-25", 5, 2, 1);
+insert into product values("KB007", "패딩팬츠7", 0, 40000, "2022-11-19", 56, 30, 1);
+insert into product values("KB008", "패딩팬츠8", 0, 40000, "2022-11-15", 550, 19, 1);
+insert into product values("KB009", "패딩팬츠9", 0, 40000, "2022-11-10", 540, 67, 1);
+insert into product values("KB010", "패딩팬츠10", 0, 40000, "2022-11-03", 150, 78, 1);
+
+insert into product values("GT001", "니트스웨터1_아울렛", 0, 72000, "2023-11-29", 1441, 1300, 1);
+insert into product values("GT002", "니트스웨터2_아울렛", 0, 85000, "2023-10-10", 2321, 8320, 1);
+insert into product values("GT003", "니트스웨터3_아울렛", 0, 36000, "2023-08-19", 3275, 1100, 1);
+insert into product values("GT004", "니트스웨터4_아울렛", 0, 78000, "2023-07-29", 3322, 3211, 1);
+insert into product values("GT005", "니트스웨터5_아울렛", 0, 82000, "2023-10-15", 2256, 2200, 1);
+insert into product values("GT006", "니트스웨터6", 0, 40000, "2000-11-25", 5, 2, 1);
+insert into product values("GT007", "니트스웨터7", 0, 40000, "2000-11-19", 56, 30, 1);
+insert into product values("GT008", "니트스웨터8", 0, 40000, "2000-11-15", 550, 19, 1);
+insert into product values("GT009", "니트스웨터9", 0, 40000, "2000-11-10", 540, 67, 1);
+insert into product values("GT010", "니트스웨터10", 0, 40000, "2000-11-03", 150, 78, 1);
+
+insert into product values("GB001", "필드배기팬츠1", 0, 40000, "2022-11-29", 11, 100, 1);
+insert into product values("GB002", "필드배기팬츠2", 0, 40000, "2022-10-10", 21, 80, 1);
+insert into product values("GB003", "필드배기팬츠3", 0, 40000, "2022-08-19", 75, 1100, 1);
+insert into product values("GB004", "필드배기팬츠4", 0, 40000, "2022-07-29", 48, 1, 1);
+insert into product values("GB005", "필드배기팬츠5", 0, 40000, "2022-10-15", 22, 200, 1);
+insert into product values("GB006", "필드배기팬츠6", 0, 40000, "2022-11-25", 5, 2, 1);
+insert into product values("GB007", "필드배기팬츠7", 0, 40000, "2022-11-19", 56, 30, 1);
+insert into product values("GB008", "필드배기팬츠8", 0, 40000, "2022-11-15", 550, 19, 1);
+insert into product values("GB009", "필드배기팬츠9", 0, 40000, "2022-11-10", 540, 67, 1);
+insert into product values("GB010", "필드배기팬츠10", 0, 40000, "2022-11-03", 150, 78, 1);
+
+truncate product_img_dm;
+truncate product_img_dd;
+
+INSERT INTO product_img_dm  (p_serialNo,  p_productImg_DM)  VALUES  ('WT001',  'woman/top/WT001/thumnail.jpg');   
+INSERT INTO product_img_dm  (p_serialNo,  p_productImg_DM)  VALUES  ('WT002',  'woman/top/WT002/thumnail.jpg');   
+INSERT INTO product_img_dm  (p_serialNo,  p_productImg_DM)  VALUES  ('WT003',  'woman/top/WT003/thumnail.jpg');   
+INSERT INTO product_img_dm  (p_serialNo,  p_productImg_DM)  VALUES  ('WT004',  'woman/top/WT004/thumnail.jpg');   
+INSERT INTO product_img_dm  (p_serialNo,  p_productImg_DM)  VALUES  ('WT005',  'woman/top/WT005/thumnail.jpg');   
+INSERT INTO product_img_dm  (p_serialNo,  p_productImg_DM)  VALUES  ('WT006',  'woman/top/WT006/thumnail.jpg');   
+INSERT INTO product_img_dm  (p_serialNo,  p_productImg_DM)  VALUES  ('WT007',  'woman/top/WT007/thumnail.jpg'); 
+INSERT INTO product_img_dm (p_serialNo, p_productImg_DM) VALUES ('MO001', 'man/outer/MO001/thumnail.jpg');
+
+INSERT INTO product_img_dd (p_serialNo, p_explainImg) VALUES ('MO001','man/outer/MO001/detail1.gif');
+INSERT INTO product_img_dd (p_serialNo, p_explainImg) VALUES ('MO001','man/outer/MO001/detail2.jpg');
+INSERT INTO product_img_dd (p_serialNo, p_explainImg) VALUES ('MO001','man/outer/MO001/detail3.jpg');
+INSERT INTO product_img_dd (p_serialNo, p_explainImg) VALUES ('MO001','man/outer/MO001/detail4.jpg');
+INSERT INTO product_img_dd (p_serialNo, p_explainImg) VALUES ('MO001','man/outer/MO001/detail5.jpg');
+INSERT INTO product_img_dd (p_serialNo, p_explainImg) VALUES ('MO001','man/outer/MO001/detail6.gif');
+INSERT INTO product_img_dd (p_serialNo, p_explainImg) VALUES ('MO001','man/outer/MO001/detail7.gif');
+
+INSERT INTO product_img_dm  (p_serialNo,  p_productImg_dm)  VALUES  ('MT001',  'man/top/MT001/thumnail.gif');   
+INSERT INTO product_img_dm  (p_serialNo,  p_productImg_dm)  VALUES  ('MT002',  'man/top/MT002/thumnail.jpg');   
+INSERT INTO product_img_dm  (p_serialNo,  p_productImg_dm)  VALUES  ('MT003',  'man/top/MT003/thumnail.jpg');   
+INSERT INTO product_img_dm  (p_serialNo,  p_productImg_dm)  VALUES  ('MT004',  'man/top/MT004/thumnail.jpg');   
+INSERT INTO product_img_dm  (p_serialNo,  p_productImg_dm)  VALUES  ('MT005',  'man/top/MT005/thumnail.jpg');   
+
+INSERT INTO product_img_dm  (p_serialNo,  p_productImg_dm)  VALUES  ('GT001',  'golf/top/GT001/thumnail.jpg');   
+INSERT INTO product_img_dm  (p_serialNo,  p_productImg_dm)  VALUES  ('GT002',  'golf/top/GT002/thumnail.jpg');   
+INSERT INTO product_img_dm  (p_serialNo,  p_productImg_dm)  VALUES  ('GT003',  'golf/top/GT003/thumnail.jpg');   
+INSERT INTO product_img_dm  (p_serialNo,  p_productImg_dm)  VALUES  ('GT004',  'golf/top/GT004/thumnail.jpg');   
+INSERT INTO product_img_dm  (p_serialNo,  p_productImg_dm)  VALUES  ('GT005',  'golf/top/GT005/thumnail.jpg');   
+
+INSERT INTO product_img_dm  (p_serialNo,  p_productImg_dm)  VALUES  ('KT001',  'kid/top/KT001/thumnail.jpg');   
+INSERT INTO product_img_dm  (p_serialNo,  p_productImg_dm)  VALUES  ('KT002',  'kid/top/KT002/thumnail.jpg');   
+INSERT INTO product_img_dm  (p_serialNo,  p_productImg_dm)  VALUES  ('KT003',  'kid/top/KT003/thumnail.jpg');   
+INSERT INTO product_img_dm  (p_serialNo,  p_productImg_dm)  VALUES  ('KT004',  'kid/top/KT004/thumnail.jpg');   
+INSERT INTO product_img_dm  (p_serialNo,  p_productImg_dm)  VALUES  ('KT005',  'kid/top/KT005/thumnail.jpg');   
+
+
+
+INSERT INTO product_img_dd  (p_serialNo,  p_explainImg)  VALUES ('WT001','woman/top/WT001/detail1.jpg');  
+INSERT INTO product_img_dd  (p_serialNo,  p_explainImg)  VALUES ('WT001','woman/top/WT001/detail2.jpg');  
+INSERT INTO product_img_dd  (p_serialNo,  p_explainImg)  VALUES ('WT001','woman/top/WT001/detail3.jpg');  
+INSERT INTO product_img_dd  (p_serialNo,  p_explainImg)  VALUES ('WT001','woman/top/WT001/detail4.jpg');  
+INSERT INTO product_img_dd  (p_serialNo,  p_explainImg)  VALUES ('WT001','woman/top/WT001/detail5.jpg');  
+INSERT INTO product_img_dd  (p_serialNo,  p_explainImg)  VALUES ('WT001','woman/top/WT001/detail6.jpg');  
+INSERT INTO product_img_dd  (p_serialNo,  p_explainImg)  VALUES ('WT001','woman/top/WT001/detail7.jpg');  
+INSERT INTO product_img_dd  (p_serialNo,  p_explainImg)  VALUES ('WT001','woman/top/WT001/detail8.jpg');  
+INSERT INTO product_img_dd  (p_serialNo,  p_explainImg)  VALUES ('WT001','woman/top/WT001/detail9.jpg');  
+
+
+
+INSERT INTO product_img_dd   (p_serialNo, p_explainImg)  VALUES ('WT002','woman/top/WT002/detail1.jpg');
+INSERT INTO product_img_dd   (p_serialNo, p_explainImg)  VALUES ('WT002','woman/top/WT002/detail2.jpg');
+INSERT INTO product_img_dd   (p_serialNo, p_explainImg)  VALUES ('WT002','woman/top/WT002/detail3.jpg');
+
+INSERT INTO product_img_dd   (p_serialNo, p_explainImg)  VALUES ('WT003','woman/top/WT003/detail1.jpg');
+INSERT INTO product_img_dd   (p_serialNo, p_explainImg)  VALUES ('WT003','woman/top/WT003/detail2.jpg');
+INSERT INTO product_img_dd   (p_serialNo, p_explainImg)  VALUES ('WT003','woman/top/WT003/detail3.jpg');
+
+INSERT INTO product_img_dd   (p_serialNo, p_explainImg)  VALUES ('WT004','woman/top/WT004/detail1.jpg');
+INSERT INTO product_img_dd   (p_serialNo, p_explainImg)  VALUES ('WT004','woman/top/WT004/detail2.jpg');
+
+
+INSERT INTO product_img_dd   (p_serialNo, p_explainImg)  VALUES ('WT005','woman/top/WT005/detail1.jpg');
+INSERT INTO product_img_dd   (p_serialNo, p_explainImg)  VALUES ('WT005','woman/top/WT005/detail2.jpg');
+
+INSERT INTO product_img_dd   (p_serialNo, p_explainImg)  VALUES ('WT006','woman/top/WT006/detail1.jpg');
+INSERT INTO product_img_dd   (p_serialNo, p_explainImg)  VALUES ('WT06','woman/top/WT006/detail2.jpg');
+
+INSERT INTO product_img_dd   (p_serialNo, p_explainImg)  VALUES ('WT007','woman/top/WT007/detail1.jpg');
+INSERT INTO product_img_dd   (p_serialNo, p_explainImg)  VALUES ('WT007','woman/top/WT007/detail2.jpg');
+
+INSERT INTO product_img_dd   (p_serialNo, p_explainImg)  VALUES ('MT001','man/top/MT001/detail1.jpg');
+INSERT INTO product_img_dd   (p_serialNo, p_explainImg)  VALUES ('MT001','man/top/MT001/detail2.jpg');
+INSERT INTO product_img_dd   (p_serialNo, p_explainImg)  VALUES ('MT001','man/top/MT001/detail3.jpg');
+
+INSERT INTO product_img_dd   (p_serialNo, p_explainImg)  VALUES ('MT002','man/top/MT002/detail1.jpg');
+INSERT INTO product_img_dd   (p_serialNo, p_explainImg)  VALUES ('MT002','man/top/MT002/detail2.jpg');
+INSERT INTO product_img_dd   (p_serialNo, p_explainImg)  VALUES ('MT002','man/top/MT002/detail3.jpg');
+
+INSERT INTO product_img_dd   (p_serialNo, p_explainImg)  VALUES ('MT003','man/top/MT003/detail1.jpg');
+INSERT INTO product_img_dd   (p_serialNo, p_explainImg)  VALUES ('MT003','man/top/MT003/detail2.jpg');
+INSERT INTO product_img_dd   (p_serialNo, p_explainImg)  VALUES ('MT003','man/top/MT003/detail3.jpg');
+
+INSERT INTO product_img_dd   (p_serialNo, p_explainImg)  VALUES ('MT004','man/top/MT004/detail1.jpg');
+INSERT INTO product_img_dd   (p_serialNo, p_explainImg)  VALUES ('MT004','man/top/MT004/detail2.jpg');
+INSERT INTO product_img_dd   (p_serialNo, p_explainImg)  VALUES ('MT004','man/top/MT004/detail3.jpg');
+
+INSERT INTO product_img_dd   (p_serialNo, p_explainImg)  VALUES ('MT005','man/top/MT005/detail1.jpg');
+INSERT INTO product_img_dd   (p_serialNo, p_explainImg)  VALUES ('MT005','man/top/MT005/detail2.jpg');
+INSERT INTO product_img_dd   (p_serialNo, p_explainImg)  VALUES ('MT005','man/top/MT005/detail3.jpg');
+
+INSERT INTO product_img_dd   (p_serialNo, p_explainImg)  VALUES ('KT001','kid/top/KT001/detail1.jpg');
+INSERT INTO product_img_dd   (p_serialNo, p_explainImg)  VALUES ('KT001','kid/top/KT001/detail2.jpg');
+INSERT INTO product_img_dd   (p_serialNo, p_explainImg)  VALUES ('KT001','kid/top/KT001/detail3.jpg');
+
+INSERT INTO product_img_dd   (p_serialNo, p_explainImg)  VALUES ('KT002','kid/top/KT002/detail1.jpg');
+INSERT INTO product_img_dd   (p_serialNo, p_explainImg)  VALUES ('KT002','kid/top/KT002/detail2.jpg');
+INSERT INTO product_img_dd   (p_serialNo, p_explainImg)  VALUES ('KT002','kid/top/KT002/detail3.jpg');
+
+INSERT INTO product_img_dd   (p_serialNo, p_explainImg)  VALUES ('KT003','kid/top/KT003/detail1.jpg');
+INSERT INTO product_img_dd   (p_serialNo, p_explainImg)  VALUES ('KT003','kid/top/KT003/detail2.jpg');
+INSERT INTO product_img_dd   (p_serialNo, p_explainImg)  VALUES ('KT003','kid/top/KT003/detail3.jpg');
+
+INSERT INTO product_img_dd   (p_serialNo, p_explainImg)  VALUES ('KT004','kid/top/KT004/detail1.jpg');
+INSERT INTO product_img_dd   (p_serialNo, p_explainImg)  VALUES ('KT004','kid/top/KT004/detail2.jpg');
+INSERT INTO product_img_dd   (p_serialNo, p_explainImg)  VALUES ('KT004','kid/top/KT004/detail3.jpg');
+
+INSERT INTO product_img_dd   (p_serialNo, p_explainImg)  VALUES ('KT005','kid/top/KT005/detail1.jpg');
+INSERT INTO product_img_dd   (p_serialNo, p_explainImg)  VALUES ('KT005','kid/top/KT005/detail2.jpg');
+INSERT INTO product_img_dd   (p_serialNo, p_explainImg)  VALUES ('KT005','kid/top/KT005/detail3.jpg');
+
+
+
+INSERT INTO product_img_dd   (p_serialNo, p_explainImg)  VALUES ('GT001','golf/top/GT001/detail1.jpg');
+INSERT INTO product_img_dd   (p_serialNo, p_explainImg)  VALUES ('GT001','golf/top/GT001/detail2.jpg');
+INSERT INTO product_img_dd   (p_serialNo, p_explainImg)  VALUES ('GT001','golf/top/GT001/detail3.jpg');
+
+INSERT INTO product_img_dd   (p_serialNo, p_explainImg)  VALUES ('GT002','golf/top/GT002/detail1.jpg');
+INSERT INTO product_img_dd   (p_serialNo, p_explainImg)  VALUES ('GT002','golf/top/GT002/detail2.jpg');
+INSERT INTO product_img_dd   (p_serialNo, p_explainImg)  VALUES ('GT002','golf/top/GT002/detail3.jpg');
+
+INSERT INTO product_img_dd   (p_serialNo, p_explainImg)  VALUES ('GT003','golf/top/GT003/detail1.jpg');
+INSERT INTO product_img_dd   (p_serialNo, p_explainImg)  VALUES ('GT003','golf/top/GT003/detail2.jpg');
+INSERT INTO product_img_dd   (p_serialNo, p_explainImg)  VALUES ('GT003','golf/top/GT003/detail3.jpg');
+
+INSERT INTO product_img_dd   (p_serialNo, p_explainImg)  VALUES ('GT004','golf/top/GT004/detail1.jpg');
+INSERT INTO product_img_dd   (p_serialNo, p_explainImg)  VALUES ('GT004','golf/top/GT004/detail2.jpg');
+INSERT INTO product_img_dd   (p_serialNo, p_explainImg)  VALUES ('GT004','golf/top/GT004/detail3.jpg');
+
+INSERT INTO product_img_dd   (p_serialNo, p_explainImg)  VALUES ('GT005','golf/top/GT005/detail1.jpg');
+INSERT INTO product_img_dd   (p_serialNo, p_explainImg)  VALUES ('GT005','golf/top/GT005/detail2.jpg');
+INSERT INTO product_img_dd   (p_serialNo, p_explainImg)  VALUES ('GT005','golf/top/GT005/detail3.jpg');
