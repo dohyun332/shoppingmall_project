@@ -36,7 +36,7 @@ let a= "${URLDecoder.decode(param.msg)}";
             </div>
             <div>
                 <h2>로그인</h2>
-                <form action="<c:url value='/login/login' />"  id="log_form"  method="post" >
+                <form action="<c:url value='/login/login' />" id="log_form"  method="post" >
                     <input type="hidden" name="toURL" value="${param.toURL}">
 
                     <div>
@@ -46,7 +46,7 @@ let a= "${URLDecoder.decode(param.msg)}";
                     <label for="remember_chk">
                         <input type="checkbox" id="remember_chk" name="rememberId"${empty cookie.id.value?"":"checked" }>아이디 저장
                     </label>
-                    <button type="submit" name="submit" onclick="submit_chk();">기존회원 로그인</button>
+                    <button type="button" onclick="submit_chk();">기존회원 로그인</button>
 
                 </form>
             </div>

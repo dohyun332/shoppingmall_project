@@ -99,7 +99,7 @@ input[type="checkbox"]:checked {
     margin-top: 40px;
     margin-bottom: 20px;
 }
-#log_form > button[type="submit"]{
+#log_form > button[type="button"]{
     color: #fff;
     font-size: 16px;
     background-color: #838383;

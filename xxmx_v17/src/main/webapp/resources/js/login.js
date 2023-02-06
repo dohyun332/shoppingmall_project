@@ -6,6 +6,7 @@ function submit_chk() {
 
     var id = document.getElementById("userid");
     var pw = document.getElementById("userpw");
+    var frm = document.getElementById("log_form");
 
     if(id.value == "") {
         alert("회원 ID를 입력하세요.");
@@ -16,7 +17,7 @@ function submit_chk() {
         pw.focus();
         return false;
     } else {
-        submit();
+        frm.submit();
     }
 
 
