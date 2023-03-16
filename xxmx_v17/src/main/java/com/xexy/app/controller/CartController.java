@@ -134,15 +134,17 @@ public class CartController {
 
             CartProductDto cpd1 = new CartProductDto(id, p_serialNo, p_choiceSize);
             CartProductDto cpd2 = new CartProductDto(p_cartNo, id, p_serialNo, p_choiceQuantity, p_choiceSize);
+            // 사이즈 수정 시
             if(!originSize.equals(p_choiceSize)) {
-
                 if(cartProductService.cartOne(cpd1) != null) {
+                    // 수정 시 동일상품의 동일 사이즈가 있으면 수정전 상품지우고 동일상품 수량 증가
                     Map map = new HashMap();
                     map.put("id", id);
                     map.put("cartNo", p_cartNo);
                     cartProductService.deleteOne(map);
                     cartProductService.countAdd(cpd2);
                 } else {
+                    // 수정 시 동일상품의 동일 사이즈가 없으면 수정전 상품지우고 새로 등록
                     Map map = new HashMap();
                     map.put("id", id);
                     map.put("cartNo", p_cartNo);
@@ -150,6 +152,7 @@ public class CartController {
                     cartProductService.cartAdd(cpd2);
                 }
             }
+            // 수량 수정 시
             if((originQuantity != p_choiceQuantity)) {
                 cartProductService.countChg(cpd2);
             }

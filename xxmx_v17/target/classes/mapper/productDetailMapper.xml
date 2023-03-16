@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/schema/mybatis-3-mapper.dtd">
+
+
+<mapper namespace="com.xexy.app.dao.ProductDetailMapper">
+
+    <!--상세페이지 상품,가격, 상품이미지, 대표썸네일 (재고, 색상[추후 구현]) 보여주기-->
+    <select id="productDetail"  resultType="ProductDetailDto">
+
+
+        select * from
+        (SELECT p_serialNo, p_product, p_productCategory, p_price, p_saleDate, p_hits, p_saleCount, p_displayChk FROM product) a
+        left outer join
+        (SELECT p_serialNo, p_productImg_DM FROM product_img_dm) c
+        on a.p_serialNo=c.p_serialNo
+        left outer join
+        (SELECT p_serialNo,GROUP_CONCAT(p_explainImg) as p_explainImg FROM product_img_dd group by p_serialNo) d
+        on a.p_serialNo=d.p_serialNo
+        where a.p_serialNo=#{p_serialNo}
+    </select>
+   <!-- &lt;!&ndash;상세페이지 이미지&ndash;&gt;
+    <select id="productThumbnail" parameterType="String"  resultType="String">
+        select p_productImg_DM from product_img_dm
+        where p_serialNo=#{p_serialNo};
+    </select>
+    <select id="productDetailImg"  resultType="ProductDetailDto">
+    SELECT p_explainImg FROM product_img_detail
+        where p_serialNo=#{p_serialNo}
+        order by p_no asc;
+
+    </select>-->
+        <!--조회수증가-->
+    <update id="increaseViewCnt" parameterType="String">
+        UPDATE product
+        SET   p_hits = p_hits + 1
+        WHERE p_serialNo = #{p_serialNo}
+    </update>
+
+</mapper>

@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/schema/mybatis-3-mapper.dtd">
+
+
+<mapper namespace="productListMapper">
+
+<!-- 카테고리별 전체불러오기 신상품순-->
+    <select id="selectCate" parameterType="String" resultType="productListDto">
+        select product3.*, review.reviewCnt
+        from (select product2.*, img2.covered_imgSrc
+        from (select product.*, img.imgSrc
+        from (select * from product where true and p_serialNo like concat(#{cate}, "%") ) as product
+        left join (select p_serialNo, p_productImg as imgSrc from product_img  where true and p_productImg like "%_1.%") as img
+        on product.p_serialNo = img.p_serialNo) as product2
+        left join (select p_serialNo, p_productImg as covered_imgSrc from product_img  where true and p_productImg like "%_2.%") as img2
+        on product2.p_serialNo = img2.p_serialNo) as product3
+        left join (select p_serialNo, count(*) as reviewCnt from review group by p_serialNo) as review
+        on product3.p_serialNo = review.p_serialNo order by p_saleDate desc
+    </select>
+<!-- 카테고리별 전체불러오기 인기순-->
+    <select id="selectCateSale" parameterType="String" resultType="productListDto">
+        select product3.*, review.reviewCnt
+        from (select product2.*, img2.covered_imgSrc
+        from (select product.*, img.imgSrc
+        from (select * from product where true and p_serialNo like concat(#{cate}, "%") ) as product
+        left join (select p_serialNo, p_productImg as imgSrc from product_img  where true and p_productImg like "%_1.%") as img
+        on product.p_serialNo = img.p_serialNo) as product2
+        left join (select p_serialNo, p_productImg as covered_imgSrc from product_img  where true and p_productImg like "%_2.%") as img2
+        on product2.p_serialNo = img2.p_serialNo) as product3
+        left join (select p_serialNo, count(*) as reviewCnt from review group by p_serialNo) as review
+        on product3.p_serialNo = review.p_serialNo order by p_saleCount desc
+    </select>
+<!-- 카테고리별 전체불러오기 낮은가격순-->
+    <select id="selectCatePrice" parameterType="String" resultType="productListDto">
+        select product3.*, review.reviewCnt
+        from (select product2.*, img2.covered_imgSrc
+        from (select product.*, img.imgSrc
+        from (select * from product where true and p_serialNo like concat(#{cate}, "%") ) as product
+        left join (select p_serialNo, p_productImg as imgSrc from product_img  where true and p_productImg like "%_1.%") as img
+        on product.p_serialNo = img.p_serialNo) as product2
+        left join (select p_serialNo, p_productImg as covered_imgSrc from product_img  where true and p_productImg like "%_2.%") as img2
+        on product2.p_serialNo = img2.p_serialNo) as product3
+        left join (select p_serialNo, count(*) as reviewCnt from review group by p_serialNo) as review
+        on product3.p_serialNo = review.p_serialNo order by p_price asc
+    </select>
+<!-- 카테고리별 전체불러오기 높은가격순-->
+    <select id="selectCatePriceDesc" parameterType="String" resultType="productListDto">
+        select product3.*, review.reviewCnt
+        from (select product2.*, img2.covered_imgSrc
+        from (select product.*, img.imgSrc
+        from (select * from product where true and p_serialNo like concat(#{cate}, "%")) as product
+        left join (select p_serialNo, p_productImg as imgSrc from product_img  where true and p_productImg like "%_1.%") as img
+        on product.p_serialNo = img.p_serialNo) as product2
+        left join (select p_serialNo, p_productImg as covered_imgSrc from product_img  where true and p_productImg like "%_2.%") as img2
+        on product2.p_serialNo = img2.p_serialNo) as product3
+        left join (select p_serialNo, count(*) as reviewCnt from review group by p_serialNo) as review
+        on product3.p_serialNo = review.p_serialNo order by p_price desc
+    </select>
+
+    <!-- 1+1 전체불러오기 신상품순-->
+    <select id="selectCatePlus" parameterType="map" resultType="productListDto">
+        select product3.*, review.reviewCnt
+        from (select product2.*, img2.covered_imgSrc
+        from (select product.*, img.imgSrc
+        from (select * from product where true and p_product like "%_1+1%") as product
+        left join (select p_serialNo, p_productImg as imgSrc from product_img  where true and p_productImg like "%_1.%") as img
+        on product.p_serialNo = img.p_serialNo) as product2
+        left join (select p_serialNo, p_productImg as covered_imgSrc from product_img  where true and p_productImg like "%_2.%") as img2
+        on product2.p_serialNo = img2.p_serialNo) as product3
+        left join (select p_serialNo, count(*) as reviewCnt from review group by p_serialNo) as review
+        on product3.p_serialNo = review.p_serialNo order by ${order1} ${order2}
+    </select>
+
+    <!-- 아울렛 전체불러오기 신상품순-->
+    <select id="selectCateOut" parameterType="Map" resultType="productListDto">
+    select product3.*, review.reviewCnt
+    from (select product2.*, img2.covered_imgSrc
+    from (select product.*, img.imgSrc
+    from (select * from product where true and p_product like "%_아울렛%") as product
+    left join (select p_serialNo, p_productImg as imgSrc from product_img  where true and p_productImg like "%_1.%") as img
+    on product.p_serialNo = img.p_serialNo) as product2
+    left join (select p_serialNo, p_productImg as covered_imgSrc from product_img  where true and p_productImg like "%_2.%") as img2
+    on product2.p_serialNo = img2.p_serialNo) as product3
+    left join (select p_serialNo, count(*) as reviewCnt from review group by p_serialNo) as review
+    on product3.p_serialNo = review.p_serialNo order by ${order1} ${order2}
+    </select>
+<!--    -->
+<!--    &lt;!&ndash; 1+1 전체불러오기 인기순&ndash;&gt;-->
+<!--    <select id="selectCatePlusSale" resultType="productListDto">-->
+<!--        select product3.*, review.reviewCnt-->
+<!--        from (select product2.*, img2.covered_imgSrc-->
+<!--        from (select product.*, img.imgSrc-->
+<!--        from (select * from product where true and p_product like "%_1+1%") as product-->
+<!--        left join (select p_serialNo, p_productImg as imgSrc from product_img  where true and p_productImg like "%_1.%") as img-->
+<!--        on product.p_serialNo = img.p_serialNo) as product2-->
+<!--        left join (select p_serialNo, p_productImg as covered_imgSrc from product_img  where true and p_productImg like "%_2.%") as img2-->
+<!--        on product2.p_serialNo = img2.p_serialNo) as product3-->
+<!--        left join (select p_serialNo, count(*) as reviewCnt from review group by p_serialNo) as review-->
+<!--        on product3.p_serialNo = review.p_serialNo order by p_saleCount desc-->
+<!--    </select>-->
+
+<!--    &lt;!&ndash; 1+1 전체불러오기 낮은가격순&ndash;&gt;-->
+<!--    <select id="selectCatePlusPrice" resultType="productListDto">-->
+<!--        select product3.*, review.reviewCnt-->
+<!--        from (select product2.*, img2.covered_imgSrc-->
+<!--        from (select product.*, img.imgSrc-->
+<!--        from (select * from product where true and p_product like "%_1+1%") as product-->
+<!--        left join (select p_serialNo, p_productImg as imgSrc from product_img  where true and p_productImg like "%_1.%") as img-->
+<!--        on product.p_serialNo = img.p_serialNo) as product2-->
+<!--        left join (select p_serialNo, p_productImg as covered_imgSrc from product_img  where true and p_productImg like "%_2.%") as img2-->
+<!--        on product2.p_serialNo = img2.p_serialNo) as product3-->
+<!--        left join (select p_serialNo, count(*) as reviewCnt from review group by p_serialNo) as review-->
+<!--        on product3.p_serialNo = review.p_serialNo order by #{order}-->
+<!--    </select>-->
+
+<!--    &lt;!&ndash; 1+1 전체불러오기 높은가격순&ndash;&gt;-->
+<!--    <select id="selectCatePlusPriceDesc" resultType="productListDto">-->
+<!--        select product3.*, review.reviewCnt-->
+<!--        from (select product2.*, img2.covered_imgSrc-->
+<!--        from (select product.*, img.imgSrc-->
+<!--        from (select * from product where true and p_product like "%_1+1%") as product-->
+<!--        left join (select p_serialNo, p_productImg as imgSrc from product_img  where true and p_productImg like "%_1.%") as img-->
+<!--        on product.p_serialNo = img.p_serialNo) as product2-->
+<!--        left join (select p_serialNo, p_productImg as covered_imgSrc from product_img  where true and p_productImg like "%_2.%") as img2-->
+<!--        on product2.p_serialNo = img2.p_serialNo) as product3-->
+<!--        left join (select p_serialNo, count(*) as reviewCnt from review group by p_serialNo) as review-->
+<!--        on product3.p_serialNo = review.p_serialNo order by p_price desc-->
+<!--    </select>-->
+
+<!--    &lt;!&ndash; 아울렛 전체불러오기 신상품순&ndash;&gt;-->
+<!--    <select id="selectCateOut" resultType="productListDto">-->
+<!--        select product3.*, review.reviewCnt-->
+<!--        from (select product2.*, img2.covered_imgSrc-->
+<!--        from (select product.*, img.imgSrc-->
+<!--        from (select * from product where true and p_product like "%_아울렛%") as product-->
+<!--        left join (select p_serialNo, p_productImg as imgSrc from product_img  where true and p_productImg like "%_1.%") as img-->
+<!--        on product.p_serialNo = img.p_serialNo) as product2-->
+<!--        left join (select p_serialNo, p_productImg as covered_imgSrc from product_img  where true and p_productImg like "%_2.%") as img2-->
+<!--        on product2.p_serialNo = img2.p_serialNo) as product3-->
+<!--        left join (select p_serialNo, count(*) as reviewCnt from review group by p_serialNo) as review-->
+<!--        on product3.p_serialNo = review.p_serialNo order by p_saleDate desc-->
+<!--    </select>-->
+
+<!--    &lt;!&ndash; 아울렛 전체불러오기 인기순&ndash;&gt;-->
+<!--    <select id="selectCateOutSale" resultType="productListDto">-->
+<!--        select product3.*, review.reviewCnt-->
+<!--        from (select product2.*, img2.covered_imgSrc-->
+<!--        from (select product.*, img.imgSrc-->
+<!--        from (select * from product where true and p_product like "%_아울렛%") as product-->
+<!--        left join (select p_serialNo, p_productImg as imgSrc from product_img  where true and p_productImg like "%_1.%") as img-->
+<!--        on product.p_serialNo = img.p_serialNo) as product2-->
+<!--        left join (select p_serialNo, p_productImg as covered_imgSrc from product_img  where true and p_productImg like "%_2.%") as img2-->
+<!--        on product2.p_serialNo = img2.p_serialNo) as product3-->
+<!--        left join (select p_serialNo, count(*) as reviewCnt from review group by p_serialNo) as review-->
+<!--        on product3.p_serialNo = review.p_serialNo order by p_saleCount desc-->
+<!--    </select>-->
+
+<!--    &lt;!&ndash; 아울렛 전체불러오기 낮은가격순&ndash;&gt;-->
+<!--    <select id="selectCateOutPrice" resultType="productListDto">-->
+<!--        select product3.*, review.reviewCnt-->
+<!--        from (select product2.*, img2.covered_imgSrc-->
+<!--        from (select product.*, img.imgSrc-->
+<!--        from (select * from product where true and p_product like "%_아울렛%") as product-->
+<!--        left join (select p_serialNo, p_productImg as imgSrc from product_img  where true and p_productImg like "%_1.%") as img-->
+<!--        on product.p_serialNo = img.p_serialNo) as product2-->
+<!--        left join (select p_serialNo, p_productImg as covered_imgSrc from product_img  where true and p_productImg like "%_2.%") as img2-->
+<!--        on product2.p_serialNo = img2.p_serialNo) as product3-->
+<!--        left join (select p_serialNo, count(*) as reviewCnt from review group by p_serialNo) as review-->
+<!--        on product3.p_serialNo = review.p_serialNo order by p_price asc-->
+<!--    </select>-->
+
+<!--    &lt;!&ndash; 아울렛 전체불러오기 높은가격순&ndash;&gt;-->
+<!--    <select id="selectCateOutPriceDesc" resultType="productListDto">-->
+<!--        select product3.*, review.reviewCnt-->
+<!--        from (select product2.*, img2.covered_imgSrc-->
+<!--        from (select product.*, img.imgSrc-->
+<!--        from (select * from product where true and p_product like "%_아울렛%") as product-->
+<!--        left join (select p_serialNo, p_productImg as imgSrc from product_img  where true and p_productImg like "%_1.%") as img-->
+<!--        on product.p_serialNo = img.p_serialNo) as product2-->
+<!--        left join (select p_serialNo, p_productImg as covered_imgSrc from product_img  where true and p_productImg like "%_2.%") as img2-->
+<!--        on product2.p_serialNo = img2.p_serialNo) as product3-->
+<!--        left join (select p_serialNo, count(*) as reviewCnt from review group by p_serialNo) as review-->
+<!--        on product3.p_serialNo = review.p_serialNo order by p_price desc-->
+<!--    </select>-->
+
+<!--&lt;!&ndash; 카테고리 하위 메뉴 전체 불러오기 &ndash;&gt;-->
+<!--    <select id="selectCateDep" parameterType="String" resultType="productListDto">-->
+<!--        select product3.*, review.reviewCnt-->
+<!--        from (select product2.*, img2.covered_imgSrc-->
+<!--        from (select product.*, img.imgSrc-->
+<!--        from (select * from product where true and p_serialNo like concat(#{cate}, "%")  order by p_saleDate desc) as product-->
+<!--        left join (select p_serialNo, p_productImg as imgSrc from product_img  where true and p_productImg like "%_1.%") as img-->
+<!--        on product.p_serialNo = img.p_serialNo) as product2-->
+<!--        left join (select p_serialNo, p_productImg as covered_imgSrc from product_img  where true and p_productImg like "%_2.%") as img2-->
+<!--        on product2.p_serialNo = img2.p_serialNo) as product3-->
+<!--        left join (select p_serialNo, count(*) as reviewCnt from review group by p_serialNo) as review-->
+<!--        on product3.p_serialNo = review.p_serialNo-->
+<!--    </select>-->
+
+<!--&lt;!&ndash; 카테고리 하위 메뉴 인기순 &ndash;&gt;-->
+<!--    <select id="selectCateDepSale" parameterType="String" resultType="productListDto">-->
+<!--        select product3.*, review.reviewCnt-->
+<!--        from (select product2.*, img2.covered_imgSrc-->
+<!--        from (select product.*, img.imgSrc-->
+<!--        from (select * from product where true and p_serialNo like concat(#{cate}, "%")  order by p_saleCount desc) as product-->
+<!--        left join (select p_serialNo, p_productImg as imgSrc from product_img  where true and p_productImg like "%_1.%") as img-->
+<!--        on product.p_serialNo = img.p_serialNo) as product2-->
+<!--        left join (select p_serialNo, p_productImg as covered_imgSrc from product_img  where true and p_productImg like "%_2.%") as img2-->
+<!--        on product2.p_serialNo = img2.p_serialNo) as product3-->
+<!--        left join (select p_serialNo, count(*) as reviewCnt from review group by p_serialNo) as review-->
+<!--        on product3.p_serialNo = review.p_serialNo-->
+<!--    </select>-->
+
+<!--&lt;!&ndash; 카테고리 하위 메뉴 낮은가격순 &ndash;&gt;-->
+<!--    <select id="selectCateDepPrice" parameterType="String" resultType="productListDto">-->
+<!--        select product3.*, review.reviewCnt-->
+<!--        from (select product2.*, img2.covered_imgSrc-->
+<!--        from (select product.*, img.imgSrc-->
+<!--        from (select * from product where true and p_serialNo like concat(#{cate}, "%")  order by p_price asc) as product-->
+<!--        left join (select p_serialNo, p_productImg as imgSrc from product_img  where true and p_productImg like "%_1.%") as img-->
+<!--        on product.p_serialNo = img.p_serialNo) as product2-->
+<!--        left join (select p_serialNo, p_productImg as covered_imgSrc from product_img  where true and p_productImg like "%_2.%") as img2-->
+<!--        on product2.p_serialNo = img2.p_serialNo) as product3-->
+<!--        left join (select p_serialNo, count(*) as reviewCnt from review group by p_serialNo) as review-->
+<!--        on product3.p_serialNo = review.p_serialNo-->
+<!--    </select>-->
+
+<!--&lt;!&ndash; 카테고리 하위 메뉴 높은가격순 &ndash;&gt;-->
+<!--    <select id="selectCateDepPriceDesc" parameterType="String" resultType="productListDto">-->
+<!--        select product3.*, review.reviewCnt-->
+<!--        from (select product2.*, img2.covered_imgSrc-->
+<!--        from (select product.*, img.imgSrc-->
+<!--        from (select * from product where true and p_serialNo like concat(#{cate}, "%")  order by p_price desc) as product-->
+<!--        left join (select p_serialNo, p_productImg as imgSrc from product_img  where true and p_productImg like "%_1.%") as img-->
+<!--        on product.p_serialNo = img.p_serialNo) as product2-->
+<!--        left join (select p_serialNo, p_productImg as covered_imgSrc from product_img  where true and p_productImg like "%_2.%") as img2-->
+<!--        on product2.p_serialNo = img2.p_serialNo) as product3-->
+<!--        left join (select p_serialNo, count(*) as reviewCnt from review group by p_serialNo) as review-->
+<!--        on product3.p_serialNo = review.p_serialNo-->
+<!--    </select>-->
+
+
+</mapper>

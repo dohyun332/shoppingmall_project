@@ -1,0 +1,218 @@
+#wrap2 {
+    width: 70%;
+    margin: 150px auto 300px;
+    font-weight: 700;
+}
+.title {
+    text-align: center;
+}
+.ordersPd {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 0 auto;
+    margin-bottom: 40px;
+    /* font-weight: 900; */
+}
+.tb_menu {
+    border-top: 2px solid;
+    box-sizing: border-box;
+    text-align: center;
+    height: 40px;
+    border-bottom: 1px solid #555;
+}
+.tb_content {
+    border-bottom: 1px solid #555;
+}
+.pd_info {
+    height: 130px;
+    padding: 0 70px;
+
+    display: flex;
+    gap: 20px;
+}
+.pd_img {
+    height: 130px;
+    padding: 10px 0;
+    box-sizing: border-box;
+}
+.pd_img img {
+    width: 110px;
+    height: 110px;
+    vertical-align: middle;
+}
+.pd_txt {
+   width: 100%;
+   display: flex;
+   flex-wrap: wrap;
+   align-content: center;
+}
+.pd_name {
+    line-height: 40px;
+    width: 100%;
+}
+.pd_opt {
+    line-height: 40px;
+    width: 100%;
+}
+.pd_cnt {
+    text-align: center;
+}
+.pd_price {
+    text-align: center;
+}
+
+.order_info {
+    width: 100%;
+    border-collapse: collapse;
+    border-top: 2px solid #555;
+    margin-bottom: 40px;
+}
+.order_info tr {
+    height: 50px;
+    border-bottom: 1px solid #555;
+}
+.order_menu {
+    text-align: center;
+}
+.emailBox input[type="text"] {
+    height: 25px;
+}
+.emailBox select {
+    height: 24px;
+    width: 20%;
+}
+.p_cellBox input[type="text"]{
+    height: 25px;
+    width: 5%;
+}
+
+.address_info {
+    width: 100%;
+    border-collapse: collapse;
+    border-top: 2px solid #555;
+    margin-bottom: 20px;
+}
+.row1 {
+    height: 50px;
+    border-bottom: 1px solid #555;
+}
+.row2 {
+    height: 80px;
+    border-bottom: 1px solid #555;
+}
+.address_menu {
+    text-align: center;
+}
+#p_deliveryName {
+    height: 25px;
+}
+.zipCodeBox {
+    margin-bottom: 5px;
+}
+.zipCodeBox input[type="text"]{
+    height: 25px;
+}
+.destiBox input[type="text"] {
+    height: 25px;
+    width: 30%;
+}
+
+.del_cellBox input[type="text"]{
+    height: 25px;
+    width: 10%;
+}
+.msgBox {
+    line-height: 10px;
+
+}
+#p_deliveryMessage {
+    resize: none;
+}
+
+.calc_tb {
+    width: 100%;
+    background-color: rgb(200, 200, 200);
+    text-align: center;
+    border-top: 2px solid;
+    border-bottom: 2px solid;
+    border-collapse: collapse;
+    margin-bottom: 40px;
+    font-weight: 700;
+}
+.calc_tb tr:nth-child(1) {
+    height: 40px;
+    border-bottom: 1px solid;
+}
+.calc_tb tr:nth-child(2) {
+    height: 60px;
+}
+
+.pay_tb {
+    height: 50px;
+    width: 100%;
+    border-top: 2px solid;
+    border-bottom: 1px solid;
+    border-collapse: collapse;
+    margin-bottom: 40px;
+
+}
+
+.agree_tb {
+    width: 100%;
+    border-top: 2px solid;
+    border-bottom: 1px solid;
+    border-collapse: collapse;
+}
+.agree_tb tr:nth-child(1) {
+    border-bottom: 1px solid;
+}
+.agree_tb tr:nth-child(2) {
+    height: 40px;
+}
+
+.condition_tb {
+    width: 100%;
+    border: 1px solid gray;
+    border-collapse: collapse;
+    margin: 5px 0;
+}
+.condition_tb tr{
+    height: 40px;
+}
+
+.total_tb {
+    width: 100%;
+    height: 70px;
+    border-top: 2px solid gray;
+    border-bottom: 2px solid gray;
+    border-collapse: collapse;
+    background-color: rgb(200, 200, 200);
+    margin: 5px 0 40px;
+    font-weight: 700;
+    font-size: 20px;
+}
+.menu_txt {
+    text-align: center;
+}
+
+.btn_box {
+    display: flex;
+    justify-content: center;
+    gap: 60px;
+}
+#submit_order {
+    background-color: black;
+    color: white;
+    border: none;
+}
+#cancel_order {
+    background-color: white;
+    border: 1px solid rgb(200, 200, 200);
+}
+.btn {
+    width: 18%;
+    height: 60px;
+    font-size: 16px;
+    font-weight: 800;
+    cursor: pointer;
+}

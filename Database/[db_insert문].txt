@@ -522,7 +522,7 @@ INSERT INTO product_img_dd (p_serialNo, p_explainImg) VALUES ('MO001','man/outer
 INSERT INTO product_img_dd (p_serialNo, p_explainImg) VALUES ('MO001','man/outer/MO001/detail6.gif');
 INSERT INTO product_img_dd (p_serialNo, p_explainImg) VALUES ('MO001','man/outer/MO001/detail7.gif');
 
-INSERT INTO product_img_dm  (p_serialNo,  p_productImg_dm)  VALUES  ('MT001',  'man/top/MT001/thumnail.gif');   
+INSERT INTO product_img_dm  (p_serialNo,  p_productImg_dm)  VALUES  ('MT001',  'man/top/MT001/thumnail.jpg');   
 INSERT INTO product_img_dm  (p_serialNo,  p_productImg_dm)  VALUES  ('MT002',  'man/top/MT002/thumnail.jpg');   
 INSERT INTO product_img_dm  (p_serialNo,  p_productImg_dm)  VALUES  ('MT003',  'man/top/MT003/thumnail.jpg');   
 INSERT INTO product_img_dm  (p_serialNo,  p_productImg_dm)  VALUES  ('MT004',  'man/top/MT004/thumnail.jpg');   
@@ -636,3 +636,7 @@ INSERT INTO product_img_dd   (p_serialNo, p_explainImg)  VALUES ('GT004','golf/t
 INSERT INTO product_img_dd   (p_serialNo, p_explainImg)  VALUES ('GT005','golf/top/GT005/detail1.jpg');
 INSERT INTO product_img_dd   (p_serialNo, p_explainImg)  VALUES ('GT005','golf/top/GT005/detail2.jpg');
 INSERT INTO product_img_dd   (p_serialNo, p_explainImg)  VALUES ('GT005','golf/top/GT005/detail3.jpg');
+
+select * from product_img_dm;
+commit;
+select * from member;

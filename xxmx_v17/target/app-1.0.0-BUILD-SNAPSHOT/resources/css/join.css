@@ -1,0 +1,186 @@
+.join_main {
+    margin: 120px;
+    width: 100%;
+}
+.join_main h2 {
+    width: 500px;
+    padding: 40px 0;
+    margin: 0 auto;
+    font-size: 30px;
+    font-weight: 900;
+    text-align: center;
+}
+table {
+    margin: 0 auto;
+    border-collapse: collapse;
+    width: 900px;
+}
+tr {
+
+    height: 75px;
+}
+th {
+    width: 300px;
+    background: #e9e9e9;
+    border-bottom: 1px solid #ddd9d9;
+    color: #222;
+    font-weight: 400;
+}
+td {
+    /* background: pink; */
+    padding-left: 25px;
+    border-bottom: 1px solid #ddd9d9;
+} 
+.id_tr {
+    border-top: 3px solid #222;
+}
+#joinid {
+    height: 35px;
+    width: 450px;
+    padding-left: 10px;
+    border: 1px solid lightgray;
+}
+#id_chk {
+    height: 38px;
+    background-color: #000;
+    color: #fff;
+    cursor: pointer;
+}
+#joinpw {
+    height: 35px;
+    width: 450px;
+    padding-left: 10px;
+    border: 1px solid lightgray;
+}
+#joinpw_chk {
+    height: 35px;
+    width: 450px;
+    padding-left: 10px;
+    border: 1px solid lightgray;
+}
+#joinname {
+    height: 35px;
+    width: 450px;
+    padding-left: 10px;
+    border: 1px solid lightgray;
+}
+.post {
+    height: 155px;
+}
+#post_address, #post_detailAddress {
+    height: 35px;
+    width: 450px;
+    padding-left: 10px;
+    border: 1px solid lightgray;
+    margin: 2px 0;
+}
+#post_num {
+    height: 35px;
+    width: 150px;
+    padding-left: 10px;
+    border: 1px solid lightgray;
+    margin: 2px 0;
+}
+#post_btn {
+    width: 75px;
+    height: 35px;
+    color: #fff;
+    background-color: #000;
+    cursor: pointer;
+}
+#Phone1 {
+    height: 35px;
+    width: 65px;
+    padding-left: 10px;
+    border: 1px solid lightgray;
+    margin: 2px 0;
+}
+#Phone2, #Phone3 {
+    height: 31px;
+    width: 50px;
+    padding-left: 10px;
+    border: 1px solid lightgray;
+    margin: 2px 0;
+}
+#email_id, #email_domain {
+    height: 35px;
+    width: 125px;
+    padding-left: 10px;
+    border: 1px solid lightgray;
+    margin: 2px 0;
+}
+.email select {
+    height: 39px;
+    width: 125px;
+    padding-left: 10px;
+    border: 1px solid lightgray;
+    margin: 2px 0;
+}
+#email_chk {
+    height: 38px;
+    background-color: #000;
+    color: #fff;
+    cursor: pointer;
+}
+#select_year, #select_month, #select_day {
+    height: 35px;
+    width: 125px;
+    padding-left: 10px;
+    border: 1px solid lightgray;
+    margin: 2px 0;
+}
+.join_main h3 {
+    width: 900px;
+    padding-bottom: 15px;
+    padding-top: 30px;
+    margin: 0 auto;
+    font-size: 23px;
+    font-weight: 900;
+}
+.agree_chk {
+    width: 900px;
+    margin: 0 auto;
+    border-top: 3px solid #222;
+}
+.agree_chk2, .agree_chk3, .agree_chk4 {
+    height: 70px;
+    line-height: 70px;
+    padding-left: 30px;
+    border-bottom: 1px solid lightgray;
+    color: #828282;
+}
+.agree_chk1 {
+    height: 85px;
+    line-height: 85px;
+    padding-left: 30px;
+    border-bottom: 1px solid lightgray;
+    font-weight: 900;
+    font-size: 18px;
+}
+.foot_btn {
+    padding-left: 50px;
+    width: 900px;
+    margin: 30px auto;
+    text-align: center;
+}
+.foot_btn > div {
+    display: inline-block;
+}
+.foot_btn > button {
+    width: 140px;
+    height: 40px;
+}
+#reset {
+    width: 140px;
+    height: 40px;
+    color: #000;
+    background-color: #fff;
+    cursor: pointer;
+}
+#join_submit {
+    width: 140px;
+    height: 40px;
+    color: #fff;
+    background-color: #000;
+    cursor: pointer;
+}

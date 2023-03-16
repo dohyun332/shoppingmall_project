@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/schema/mybatis-3-mapper.dtd">
+
+
+<mapper namespace="orderMapper">
+
+<!-- 주문 페이지 상품정보 불러오기 -->
+    <select id="orderPd" parameterType="String" resultType="CartDto">
+        select pd2.*, product.p_product, product.p_price
+        from (select pd.*, img.p_productImg_DM
+        from product_cart as pd
+        left join product_img_dm as img
+        on pd.p_serialNo=img.p_serialNo) as pd2
+        left join product
+        on pd2.p_serialNo=product.p_serialNo
+        where pd2.m_id = #{id}
+    </select>
+
+<!--  이름, email, 주소 불러오기  -->
+    <select id="selNameMail" parameterType="String" resultType="OrderNameMailDto">
+        select m_name, m_email, m_zipCode, m_addr1, m_addr2 from member where m_id=#{id}
+    </select>
+
+<!--  배송지 목록 불러오기  -->
+    <select id="selDestination" parameterType="String" resultType="OrderDestinationDto" >
+        select p_destination1, p_destination2, p_zipCode from address where p_homeAddr=1 and m_id=#{id} order by p_buyDate desc limit 5
+    </select>
+
+<!--  총금액불러오기  -->
+
+
+<!--  마지막 송장번호 불러오기  -->
+    <select id="selInvo" resultType="int">
+        select p_invoice from address order by p_invoice desc limit 1
+    </select>
+
+<!-- 주문페이지 주문내역TB 저장하기-->
+    <insert id="insertOrder" parameterType="OrdersDto" >
+        insert into orders(p_invoice, m_id, p_orderDate, p_serialNo, p_orderStatus, p_buyQuantity, p_buyColor, p_buySize, p_price, p_buySubtotal) values(#{p_invoice}, #{m_id}, DATE_FORMAT(now(), '%Y-%m-%d'), #{p_serialNo},"결제완료", #{p_buyQuantity}, #{p_buySize}, "black", #{p_price}, #{p_buySubtotal})
+    </insert>
+
+<!-- 주문페이지 배송지TB 저장하기-->
+    <insert id="insertAddress" parameterType="AddressDto" >
+        insert into address(m_id, p_name, p_cell, p_email, p_homeAddr, p_deliveryName, p_deliveryCell1, p_deliveryCell2, p_zipCode, p_destination1, p_destination2, p_deliveryMessage, p_totalPrice, p_deliveryPrice, p_pay, p_buyDate) values(#{m_id}, #{p_name}, #{p_cell}, #{p_email}, #{p_homeAddr}, #{p_deliveryName}, #{p_deliveryCell1}, #{p_deliveryCell2}, #{p_zipCode}, #{p_destination1}, #{p_destination2}, #{p_deliveryMessage}, #{p_totalPrice}, 2500, #{p_pay}, DATE_FORMAT(now(), '%Y-%m-%d'))
+    </insert>
+</mapper>

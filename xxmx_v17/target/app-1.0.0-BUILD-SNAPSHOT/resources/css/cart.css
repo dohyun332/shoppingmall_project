@@ -1,0 +1,155 @@
+#wrap {
+    font-weight: 700;
+}
+h2 {
+    text-align: center;
+    margin-top: 150px;
+}
+.cart_tb {
+    border-collapse: collapse;
+    margin: 0 auto;
+}
+.tb_menu {
+    border-top: 2px solid;
+    border-bottom: 1px solid #555555;
+    box-sizing: border-box;
+    text-align: center;
+    height: 70px;
+}
+.chk_all {
+    width: 18px;
+    height: 18px;
+}
+.chk_cart {
+    width: 18px;
+    height: 18px;
+}
+.tb_content {
+    height: 150px;
+    border-bottom: 1px solid #555555;
+    box-sizing: border-box;
+}
+.pd_info {
+    height: 150px;
+    padding: 0 70px;
+
+    display: flex;
+    gap: 20px;
+}
+.pd_img {
+    line-height: 150px;
+}
+.pd_img img {
+    width: 120px;
+    height: 120px;
+    vertical-align: middle;
+}
+.pd_txt {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+}
+.pd_name {
+    line-height: 40px;
+    width: 100%;
+}
+.pd_opt {
+    line-height: 40px;
+    width: 100%;
+}
+.txt {
+    text-align: center;
+}
+.cntBtn_box {
+    font-size: 0;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+.btn_pm {
+    width: 30px;
+    height: 30px;
+    line-height: 20px;
+    font-size: 20px;
+    border: 2px solid;
+    box-sizing: border-box;
+    background-color: white;
+    cursor: pointer;
+}
+.pd_cnt {
+    width: 40px;
+    height: 30px;
+    font-size: 15px;
+    border: none;
+    border-top: 2px solid;
+    border-bottom: 2px solid;
+    box-sizing: border-box;
+    outline: none;
+    padding: 0;
+    text-align: center;
+}
+.btn_modify {
+    width: 110px;
+    height: 30px;
+    background-color: black;
+    color: white;
+    font-weight: 900;
+    border: none;
+    cursor: pointer;
+
+}
+.total_area {
+    height: 200px;
+    border-bottom: 2px solid;
+}
+.alarm {
+    margin-top: 30px;
+    margin-bottom: 50px;
+}
+.sum_product_box {
+    line-height: 30px;
+    display: flex;
+    gap: 100px;
+    justify-content: right;
+}
+.sum_total_box {
+    line-height: 30px;
+    display: flex;
+    gap: 65px;
+    justify-content: right;
+}
+.sum_total {
+    font-size: 25px;
+}
+.btn_box {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 300px;
+}
+.delete_btn button {
+    width: 130px;
+    height: 30px;
+    border: 2px solid;
+    box-sizing: border-box;
+    background-color: white;
+    font-weight: 900;
+    cursor: pointer;
+}
+
+.page_btn button {
+    width: 200px;
+    height: 60px;
+    border: 2px solid black;
+    box-sizing: border-box;
+    font-weight: 900;
+    cursor: pointer;
+}
+.shopping {
+    background-color: white;
+}
+.orders {
+    background-color: black;
+    color: white;
+}

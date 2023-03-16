@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE configuration
+        PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+    <typeAliases>
+        <!-- 아직 BoardDto 안만들거니까 잠시 주석 처리하기 -->
+        <!-- 여기는 별칭 정하는곳  boardMapper 에 resultType="BoardDto" 임  -->
+        <typeAlias alias="ProductDto" type="com.xexy.app.domain.MainProductDto"/>
+        <typeAlias alias="CartDto" type="com.xexy.app.domain.CartProductDto"/>
+        <typeAlias alias="ProductDetailDto" type="com.xexy.app.domain.ProductDetailDto"/>
+        <typeAlias alias="OrderNameMailDto" type="com.xexy.app.domain.OrderNameMailDto"/>
+        <typeAlias alias="OrderDestinationDto" type="com.xexy.app.domain.OrderDestinationDto"/>
+        <typeAlias alias="OrdersDto" type="com.xexy.app.domain.OrdersDto"/>
+        <typeAlias alias="AddressDto" type="com.xexy.app.domain.AddressDto"/>
+        <typeAlias alias="MemberDto" type="com.xexy.app.domain.MemberDto"/>
+        <typeAlias alias="productListDto" type="com.xexy.app.domain.ProductListDto"/>
+    </typeAliases>
+</configuration>

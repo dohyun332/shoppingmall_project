@@ -1,0 +1,15 @@
+.search_wrap {
+    width: 100%;
+    padding: 100px 0 50px;
+    background-color: #eeeeee;
+}
+
+.search_text {
+    font-size: 30px;
+    text-align: center;
+}
+
+.body_search_area {
+    width: 450px;
+    margin: 0 auto;
+}

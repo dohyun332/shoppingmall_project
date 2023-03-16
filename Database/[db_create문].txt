@@ -52,7 +52,7 @@ CREATE TABLE `orders` (
   `p_buySubtotal` int NOT NULL,
   `p_invoice` int NOT NULL,
   PRIMARY KEY (`p_orderNo`)
-) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_cimembermember;
+) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 CREATE TABLE `product` (
   `p_serialNo` varchar(255) NOT NULL,
