@@ -36,17 +36,17 @@ let a= "${URLDecoder.decode(param.msg)}";
             </div>
             <div>
                 <h2>로그인</h2>
-                <form action="<c:url value='/login/login' />" id="log_form"  method="post" >
+                <form action="<c:url value='/login/login' />" id="log_form"  method="post" onsubmit="return submit_chk();">
                     <input type="hidden" name="toURL" value="${param.toURL}">
 
                     <div>
-                        <input type="text" id="userid" name="m_id" value="${ cookie.id.value }" placeholder="아이디" value="">
-                        <input type="password" id="userpw" name="m_pw" placeholder="비밀번호" value="">
+                        <input type="text" id="userid" name="m_id" value="${ cookie.id.value }" placeholder="아이디">
+                        <input type="password" id="userpw" name="m_pw" placeholder="비밀번호" value="wprtlalrtm1!">
                     </div>
                     <label for="remember_chk">
                         <input type="checkbox" id="remember_chk" name="rememberId"${empty cookie.id.value?"":"checked" }>아이디 저장
                     </label>
-                    <button type="button" onclick="submit_chk();">기존회원 로그인</button>
+                    <button>기존회원 로그인</button>
 
                 </form>
             </div>

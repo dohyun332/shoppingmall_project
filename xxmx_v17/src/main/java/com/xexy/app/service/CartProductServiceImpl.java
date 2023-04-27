@@ -37,7 +37,7 @@ public class CartProductServiceImpl implements CartProductService {
         return cartProductDao.cartGetP(p_cartNo);
 }
 
-//    사이즈변경
+//    사이즈, 수량 변경
     @Override
     public int sizeChg(CartProductDto cartProductDto) {
         return cartProductDao.sizeChange(cartProductDto);

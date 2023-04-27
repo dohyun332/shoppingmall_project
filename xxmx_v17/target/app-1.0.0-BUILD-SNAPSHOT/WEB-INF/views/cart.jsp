@@ -50,7 +50,7 @@
                         </tr>
                         <c:choose>
                             <c:when test="${empty cartAll}">
-                                <tr class="tb_content">
+                                <tr class="tb_content_none">
                                     <td colspan="6" style="text-align: center; font-size: 20px;">
                                         장바구니에 담긴 상품이 없습니다.
                                     </td>

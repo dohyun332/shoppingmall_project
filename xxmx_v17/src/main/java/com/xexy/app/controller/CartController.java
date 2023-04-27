@@ -1,5 +1,6 @@
 package com.xexy.app.controller;
 
+import com.xexy.app.domain.AddressDto;
 import com.xexy.app.domain.CartProductDto;
 import com.xexy.app.service.CartProductService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -137,29 +138,34 @@ public class CartController {
             // 사이즈 수정 시
             if(!originSize.equals(p_choiceSize)) {
                 if(cartProductService.cartOne(cpd1) != null) {
-                    // 수정 시 동일상품의 동일 사이즈가 있으면 수정전 상품지우고 동일상품 수량 증가
+                    // 수정하려는 사이즈와  동일 상품/사이즈가 있으면 수정전 상품지우고 동일 상품/사이즈 수량 증가
                     Map map = new HashMap();
                     map.put("id", id);
                     map.put("cartNo", p_cartNo);
                     cartProductService.deleteOne(map);
                     cartProductService.countAdd(cpd2);
                 } else {
-                    // 수정 시 동일상품의 동일 사이즈가 없으면 수정전 상품지우고 새로 등록
+                    // 수정 시 동일상품의 동일 사이즈가 없으면 사이즈, 수량 변경
                     Map map = new HashMap();
                     map.put("id", id);
                     map.put("cartNo", p_cartNo);
-                    cartProductService.deleteOne(map);
-                    cartProductService.cartAdd(cpd2);
+                    cartProductService.sizeChg(cpd2);
+//                    cartProductService.deleteOne(map);
+//                    cartProductService.cartAdd(cpd2);
                 }
-            }
-            // 수량 수정 시
-            if((originQuantity != p_choiceQuantity)) {
+            } else if(originQuantity != p_choiceQuantity){
+                // 수량만 수정 시
                 cartProductService.countChg(cpd2);
             }
+
         }
 
         return "redirect:/product/cart";
     }
 
+    @GetMapping("/test")
+    public String test(AddressDto addressDto) {
+        return "test";
+    }
 
 }

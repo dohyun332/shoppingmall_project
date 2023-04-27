@@ -27,7 +27,7 @@
 <body>
 <header>
     <div id="t_banner">
-        <div class="contents_area">뭔가 광고</div>
+        <div class="contents_area">광고 배너</div>
     </div>
     <div class="search_disable"></div>
     <div class="search_pan">

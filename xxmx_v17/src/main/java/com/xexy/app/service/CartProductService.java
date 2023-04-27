@@ -18,7 +18,7 @@ public interface CartProductService {
     //    장바구니 해당pk의 상품하나 가져오기
     public CartProductDto cartGetPk(int p_cartNo);
 
-    //    사이즈변경
+    //    사이즈, 수량 변경
     int sizeChg(CartProductDto cartProductDto);
 
     //    수량변경

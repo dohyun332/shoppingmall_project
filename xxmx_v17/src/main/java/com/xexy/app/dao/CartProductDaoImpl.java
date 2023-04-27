@@ -35,7 +35,7 @@ public class CartProductDaoImpl implements CartProductDao {
         return session.selectOne("cartMapper.cartGetPk", p_cartNo);
     }
 
-//    사이즈변경
+//    사이즈, 수량 변경
     @Override
     public int sizeChange(CartProductDto cartProductDto) {
         return session.update("cartMapper.sizeChange", cartProductDto);

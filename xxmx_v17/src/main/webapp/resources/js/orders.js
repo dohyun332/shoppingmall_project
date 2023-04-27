@@ -154,73 +154,73 @@ $(document).ready(function() {
 
     // 주문동의 유효성 검사
     $("#submit_order").on("click", function() {
-        if($("#email1").val() == "") {
-            alert("주문자정보의 이메일을 입력해주세요");
-            return false;
-        }
-        else if($("#email2").val() == "") {
-            alert("주문자정보의 이메일의 도메인을 입력해주세요");
-            return;
-        }
-        else if($("#p_cell1").val() == "") {
-            alert("주문자정보의 연락처를 입력해주세요");
-            return;
-        }
-        else if($("#p_cell2").val() == "") {
-            alert("주문자정보의 연락처를 입력해주세요");
-            return;
-        }
-        else if($("#p_deliveryName").val() == "") {
-            alert("배송정보의 이름을 입력해주세요");
-            return;
-        }
-        else if($("#p_deliveryCell1_1").val() == "") {
-            alert("배송정보의 연락처1을 입력해주세요");
-            return;
-        }
-        else if($("#p_deliveryCell1_2").val() == "") {
-            alert("배송정보의 연락처1을 입력해주세요");
-            return;
-        }
-        else if($("#p_homeAddr1").prop("checked") == false
-            && $("#p_homeAddr2").prop("checked") == false
-            && $("#p_homeAddr3").prop("checked") == false
-        ) {
-            alert("배송지 선택버튼을 체크해주세요");
-            return;
-        }
-        else if($("#p_zipCode").val() == "") {
-            alert("배송정보의 우편번호를 입력해주세요");
-            return;
-        }
-        else if($("#p_destination1").val() == "") {
-            alert("배송정보의 주소를 입력해주세요");
-            return;
-        }
-        else if($("#p_destination2").val() == "") {
-            alert("배송정보의 주소를 입력해주세요");
-            return;
-        }
-        else if($("#p_deliveryMessage").val() == "") {
-            alert("배송메세지를 입력해주세요");
-            return;
-        }
-        else if($("#p_pay1").prop("checked") == false
-            && $("#p_pay2").prop("checked") == false
-            && $("#p_pay3").prop("checked") == false
-        ) {
-            alert("결제방법 선택버튼을 체크해주세요");
-            return;
-        }
-        else if($("#order_agree").prop("checked") == false) {
-            alert("주문동의하셔야 주문이 가능합니다.");
-            return;
-        }
-
-        let frm = $("#frm");
-        frm.attr("action", "/product/orders_submit");
-        frm.attr("method", "post");
-        frm.submit();
+        // let frm = $("#frm");
+        // if($("#email1").val() == "") {
+        //     alert("주문자정보의 이메일을 입력해주세요");
+        //     $("#email1").focus();
+        // }
+        // else if($("#email2").val() == "") {
+        //     alert("주문자정보의 이메일의 도메인을 입력해주세요");
+        //     $("#email2").focus();
+        // }
+        // else if($("#p_cell1").val() == "") {
+        //     alert("주문자정보의 연락처를 입력해주세요");
+        //     $("#p_cell1").focus();
+        // }
+        // else if($("#p_cell2").val() == "") {
+        //     alert("주문자정보의 연락처를 입력해주세요");
+        //     $("#p_cell2").focus();
+        // }
+        // else if($("#p_deliveryName").val() == "") {
+        //     alert("배송정보의 이름을 입력해주세요");
+        //     $("#p_deliveryName").focus();
+        // }
+        // else if($("#p_deliveryCell1_1").val() == "") {
+        //     alert("배송정보의 연락처1을 입력해주세요");
+        //     $("#p_deliveryCell1_1").focus();
+        // }
+        // else if($("#p_deliveryCell1_2").val() == "") {
+        //     alert("배송정보의 연락처1을 입력해주세요");
+        //     $("#p_deliveryCell1_2").focus();
+        // }
+        // else if($("#p_homeAddr1").prop("checked") == false
+        //     && $("#p_homeAddr2").prop("checked") == false
+        //     && $("#p_homeAddr3").prop("checked") == false
+        // ) {
+        //     alert("배송지 선택버튼을 체크해주세요");
+        //     $("#p_homeAddr1").focus();
+        // }
+        // else if($("#p_zipCode").val() == "") {
+        //     alert("배송정보의 우편번호를 입력해주세요");
+        //     $("#p_zipCode").focus();
+        // }
+        // else if($("#p_destination1").val() == "") {
+        //     alert("배송정보의 주소를 입력해주세요");
+        //     $("#p_destination1").focus();
+        // }
+        // else if($("#p_destination2").val() == "") {
+        //     alert("배송정보의 주소를 입력해주세요");
+        //     $("#p_destination2").focus();
+        // }
+        // else if($("#p_deliveryMessage").val() == "") {
+        //     alert("배송메세지를 입력해주세요");
+        //     $("#p_deliveryMessage").focus();
+        // }
+        // else if($("#p_pay1").prop("checked") == false
+        //     && $("#p_pay2").prop("checked") == false
+        //     && $("#p_pay3").prop("checked") == false
+        // ) {
+        //     alert("결제방법 선택버튼을 체크해주세요");
+        //     $("#p_pay1").focus();
+        // }
+        // else if($("#order_agree").prop("checked") == false) {
+        //     alert("주문동의하셔야 주문이 가능합니다.");
+        //     $("#order_agree").focus();
+        // } else {
+            frm.attr("action", "/product/orders_submit");
+            frm.attr("method", "post");
+            frm.submit();
+        // }
     })
 
     $("#cancel_order").on("click", function() {

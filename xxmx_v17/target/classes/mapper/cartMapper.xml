@@ -25,9 +25,9 @@
     <select id="cartGetOne" parameterType="CartDto" resultType="CartDto">
         select pd2.*, product.p_product, product.p_price
         from (select pd.*, img.p_productImg_DM
-        from product_cart as pd
-        left join product_img_dm as img
-        on pd.p_serialNo=img.p_serialNo) as pd2
+                from product_cart as pd
+                left join product_img_dm as img
+                on pd.p_serialNo=img.p_serialNo) as pd2
         left join product
         on pd2.p_serialNo=product.p_serialNo
         where pd2.m_id = #{m_id} and pd2.p_serialNo=#{p_serialNo} and pd2.p_choiceSize = #{p_choiceSize}
@@ -45,11 +45,10 @@
         where pd2.p_cartNo = #{p_cartNo}
     </select>
 
-<!--  사이즈 변경  -->
+<!--  사이즈, 수량 변경  -->
     <update id="sizeChange" parameterType="CartDto">
-        update product_cart set p_choiceSize=#{p_choiceSize} where m_id=#{m_id} and p_cartNo=#{p_cartNo}
+        update product_cart set p_choiceSize=#{p_choiceSize}, p_choiceQuantity=#{p_choiceQuantity} where m_id=#{m_id} and p_cartNo=#{p_cartNo}
     </update>
-
 
 <!--  수량 변경  -->
     <update id="countChange" parameterType="CartDto">

@@ -25,6 +25,13 @@
 
 </head>
 <body>
+<script>
+    <c:if test="${not empty msg}">
+    let a= "${msg}";
+
+    alert(a);
+    </c:if>
+</script>
 
 <jsp:include page="header.jsp" flush="false"/>
 
@@ -62,7 +69,7 @@
             </table>
 
             <h3>주문자정보</h3>
-            <form action="" id="frm">
+            <form action="/product/orders_submit" id="frm" method="post">
                 <table class="order_info">
                     <colgroup>
                         <col style="width:15%;">
@@ -92,9 +99,9 @@
                         <td class="p_cellBox">
                             <input type="text" value="010" readonly>
                             -
-                            <input type="text" name="p_cell1" id="p_cell1">
+                            <input type="text" name="p_cell1" id="p_cell1" value="${p_cell1}">
                             -
-                            <input type="text" name="p_cell2" id="p_cell2">
+                            <input type="text" name="p_cell2" id="p_cell2" value="${p_cell2}">
                             <input type="hidden" id="m_zipCode" value="${orderNameMailDto.m_zipCode}">
                             <input type="hidden" id="m_addr1" value="${orderNameMailDto.m_addr1}">
                             <input type="hidden" id="m_addr2" value="${orderNameMailDto.m_addr2}">
@@ -114,16 +121,16 @@
 
                     <tr class="row1">
                         <td class="address_menu">이름</td>
-                        <td colspan="3" ><input type="text" id="p_deliveryName" name="p_deliveryName"></td>
+                        <td colspan="3" ><input type="text" id="p_deliveryName" name="p_deliveryName" value="${addressDto.p_deliveryName}"></td>
                     </tr>
                     <tr class="row1">
                         <td class="address_menu">연락처1</td>
                         <td class="del_cellBox">
                             <input type="text" value="010" readonly>
                             -
-                            <input type="text" name="p_deliveryCell1_1" id="p_deliveryCell1_1">
+                            <input type="text" name="p_deliveryCell1_1" id="p_deliveryCell1_1" value="${p_deliveryCell1_1}">
                             -
-                            <input type="text" name="p_deliveryCell1_2" id="p_deliveryCell1_2">
+                            <input type="text" name="p_deliveryCell1_2" id="p_deliveryCell1_2" value="${p_deliveryCell1_2}">
                         </td>
                         <td class="address_menu">연락처2</td>
                         <td class="del_cellBox">
@@ -139,10 +146,10 @@
                         <td class="address_menu">배송지선택</td>
                         <td colspan="3">
                             <label for="p_homeAddr1">
-                                <input type="radio" name="p_homeAddr" id="p_homeAddr1" value="0">자택
+                                <input type="radio" name="p_homeAddr" id="p_homeAddr1" value="0" ${addressDto.p_homeAddr == 0 ? "checked":""}>자택
                             </label>
                             <label for="p_homeAddr2">
-                                <input type="radio" name="p_homeAddr" id="p_homeAddr2" value="1">최근배송지
+                                <input type="radio" name="p_homeAddr" id="p_homeAddr2" value="1" ${addressDto.p_homeAddr == 1 ? "checked":""}>최근배송지
                             </label>
                             <select id="desti_recent">
                                 <option value="x" disabled selected>최근배송지</option>
@@ -151,7 +158,7 @@
                                 </c:forEach>
                             </select>
                             <label for="p_homeAddr3">
-                                <input type="radio" name="p_homeAddr" id="p_homeAddr3" value="1">신규배송지
+                                <input type="radio" name="p_homeAddr" id="p_homeAddr3" value="2" ${addressDto.p_homeAddr == 2 ? "checked":""}>신규배송지
                             </label>
                         </td>
                     </tr>
@@ -159,12 +166,12 @@
                         <td class="address_menu">주소</td>
                         <td colspan="3">
                             <div class="zipCodeBox">
-                                <input type="text" name="p_zipCode" id="p_zipCode" placeholder="우편번호">
+                                <input type="text" name="p_zipCode" id="p_zipCode" placeholder="우편번호" value="${addressDto.p_zipCode}">
                                 <input type="button" onclick="Postcode()" value="우편번호찾기">
                             </div>
                             <div class="destiBox">
-                                <input type="text" name="p_destination1" id="p_destination1" placeholder="기본주소">
-                                <input type="text" name="p_destination2" id="p_destination2" placeholder="상세주소">
+                                <input type="text" name="p_destination1" id="p_destination1" placeholder="기본주소" value="${addressDto.p_destination1}">
+                                <input type="text" name="p_destination2" id="p_destination2" placeholder="상세주소" value="${addressDto.p_destination2}">
                                 <div id="wrap" style="display:none;border:1px solid;width:500px;height:300px;margin:5px 0;position:relative">
                                     <img src="//t1.daumcdn.net/postcode/resource/images/close.png" id="btnFoldWrap" style="cursor:pointer;position:absolute;right:0px;top:-1px;z-index:1" onclick="foldDaumPostcode()" alt="접기 버튼">
                                 </div>
@@ -177,7 +184,7 @@
                             <div>(100자)</div>
                         </td>
                         <td colspan="3" class="msgBox">
-                            <textarea name="p_deliveryMessage" id="p_deliveryMessage" cols="80" rows="3"></textarea>
+                            <textarea name="p_deliveryMessage" id="p_deliveryMessage" cols="80" rows="3">${addressDto.p_deliveryMessage}</textarea>
                         </td>
                     </tr>
                 </table>
@@ -215,13 +222,13 @@
                         <td class="menu_txt">결제방법</td>
                         <td>
                             <label for="p_pay1">
-                                <input type="radio" name="p_pay" id="p_pay1" value="0">신용카드
+                                <input type="radio" name="p_pay" id="p_pay1" value="0" ${addressDto.p_pay == 0 ? "checked":""}>신용카드
                             </label>
                             <label for="p_pay2">
-                                <input type="radio" name="p_pay" id="p_pay2" value="1">휴대폰 결제
+                                <input type="radio" name="p_pay" id="p_pay2" value="1" ${addressDto.p_pay == 1 ? "checked":""}>휴대폰 결제
                             </label>
                             <label for="p_pay3">
-                                <input type="radio" name="p_pay" id="p_pay3" value="2">실시간 계좌이체
+                                <input type="radio" name="p_pay" id="p_pay3" value="2" ${addressDto.p_pay == 2 ? "checked":""}>실시간 계좌이체
                             </label>
 
                         </td>
@@ -267,7 +274,10 @@
                     <tr>
                         <td class="menu_txt">주문동의</td>
                         <td>
-                            <input type="checkbox" id="order_agree">상기 약관 및 개인정보 수집/이용에 대한 동의 내용과 결제정보를 확인하였으므로 구매진행에 동의합니다.
+
+                            <label for="order_agree">
+                                <input type="checkbox" name="agreement" id="order_agree">상기 약관 및 개인정보 수집/이용에 대한 동의 내용과 결제정보를 확인하였으므로 구매진행에 동의합니다.
+                            </label>
                         </td>
                     </tr>
                 </table>
@@ -282,8 +292,8 @@
                     </tr>
                 </table>
                 <div class="btn_box">
-                    <button id="submit_order" class="btn">주문하기</button>
-                    <button id="cancel_order" class="btn">취소하기</button>
+                    <button id="submit_order" type="submit" class="btn">주문하기</button>
+                    <button id="cancel_order" type="button" class="btn">취소하기</button>
                 </div>
             </form>
         </div>
@@ -342,6 +352,6 @@
         }).open();
     }
 </script>
-<script src="/js/orders.js"></script>
+<script src="/js/orders.js?ver=1"></script>
 </body>
 </html>

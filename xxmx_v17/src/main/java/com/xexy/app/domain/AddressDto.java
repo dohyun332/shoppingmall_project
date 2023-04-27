@@ -1,29 +1,29 @@
 package com.xexy.app.domain;
 
 public class AddressDto {
-    private int p_invoice;
+    private Integer p_invoice;
     private String m_id;
     private String p_name;
     private String p_cell;
     private String p_email;
-    private int p_homeAddr;
+    private Integer p_homeAddr;
     private String p_deliveryName;
     private String p_deliveryCell1;
     private String p_deliveryCell2;
-    private int p_zipCode;
+    private Integer p_zipCode;
     private String p_destination1;
     private String p_destination2;
     private String p_deliveryMessage;
-    private int p_totalPrice;
-    private int p_deliveryPrice;
-    private int p_pay;
+    private Integer p_totalPrice;
+    private Integer p_deliveryPrice;
+    private Integer p_pay;
     private String p_buyDate;
 
-    public int getP_invoice() {
+    public Integer getP_invoice() {
         return p_invoice;
     }
 
-    public void setP_invoice(int p_invoice) {
+    public void setP_invoice(Integer p_invoice) {
         this.p_invoice = p_invoice;
     }
 
@@ -59,11 +59,11 @@ public class AddressDto {
         this.p_email = p_email;
     }
 
-    public int getP_homeAddr() {
+    public Integer getP_homeAddr() {
         return p_homeAddr;
     }
 
-    public void setP_homeAddr(int p_homeAddr) {
+    public void setP_homeAddr(Integer p_homeAddr) {
         this.p_homeAddr = p_homeAddr;
     }
 
@@ -91,11 +91,11 @@ public class AddressDto {
         this.p_deliveryCell2 = p_deliveryCell2;
     }
 
-    public int getP_zipCode() {
+    public Integer getP_zipCode() {
         return p_zipCode;
     }
 
-    public void setP_zipCode(int p_zipCode) {
+    public void setP_zipCode(Integer p_zipCode) {
         this.p_zipCode = p_zipCode;
     }
 
@@ -123,27 +123,27 @@ public class AddressDto {
         this.p_deliveryMessage = p_deliveryMessage;
     }
 
-    public int getP_totalPrice() {
+    public Integer getP_totalPrice() {
         return p_totalPrice;
     }
 
-    public void setP_totalPrice(int p_totalPrice) {
+    public void setP_totalPrice(Integer p_totalPrice) {
         this.p_totalPrice = p_totalPrice;
     }
 
-    public int getP_deliveryPrice() {
+    public Integer getP_deliveryPrice() {
         return p_deliveryPrice;
     }
 
-    public void setP_deliveryPrice(int p_deliveryPrice) {
+    public void setP_deliveryPrice(Integer p_deliveryPrice) {
         this.p_deliveryPrice = p_deliveryPrice;
     }
 
-    public int getP_pay() {
+    public Integer getP_pay() {
         return p_pay;
     }
 
-    public void setP_pay(int p_pay) {
+    public void setP_pay(Integer p_pay) {
         this.p_pay = p_pay;
     }
 

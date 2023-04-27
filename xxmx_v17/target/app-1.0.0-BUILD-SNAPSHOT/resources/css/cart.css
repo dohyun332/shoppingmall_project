@@ -24,7 +24,7 @@ h2 {
     width: 18px;
     height: 18px;
 }
-.tb_content {
+.tb_content,.tb_content_none {
     height: 150px;
     border-bottom: 1px solid #555555;
     box-sizing: border-box;
