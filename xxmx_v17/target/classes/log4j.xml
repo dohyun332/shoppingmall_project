@@ -9,21 +9,49 @@
 			<param name="ConversionPattern" value="%d{yyyy-MM-dd HH:mm:ss} [%-5p] %c (%C{1}.%M:%L) - %m%n" />
 		</layout>
 	</appender>
-	
+
+	<appender name="rollingFile" class="org.apache.log4j.DailyRollingFileAppender">
+		<!-- 로그 파일 생성위치 -->
+		<param name="file" value="src/main/resources/log/log4j!!.log"/>
+		<param name="Append" value="true" />
+		<param name="DatePattern" value="'.'yyyy-MM-dd"/>
+		<!-- DailyRolling에서는 사용 제한 -->
+		<!--		<param name="MaxFileSize" value="50MB"/>-->
+		<!--		<param name="MaxBackupIndex" value="50"/>-->
+		<layout class="org.apache.log4j.PatternLayout">
+			<!--			<param name="ConversionPattern" value="%d{yyyy-MM-dd HH:mm:ss} [%-5p] %c (%C{1}.%M:%L) - %m%n" />-->
+			<param name="ConversionPattern" value="%d{yyyy-MM-dd HH:mm:ss} [%p] %c (%C{2}.%M:%L) - %m%n" />
+		</layout>
+	</appender>
+
+	<!-- 날짜별 로그 파일 생성(에러만) -->
+	<appender name="errFile" class="org.apache.log4j.DailyRollingFileAppender">
+		<param name="Threshold" value="ERROR"/>
+		<param name="File" value="src/main/resources/log/log4j_error.log"/>
+		<param name="Append" value="true"/>
+		<!--		<param name="MaxFileSize" value="50MB"/>-->
+		<!--		<param name="MaxBackupIndex" value="50"/>-->
+		<param name="DatePattern" value="'.'yyyy-MM-dd"/>
+		<layout class="org.apache.log4j.PatternLayout">
+			<param name="ConversionPattern" value="%d [%5p] %c [%C{2}.%M(line:%L)] - %m%n" />
+		</layout>
+	</appender>
+
+	<!-- 특정 패키지 출력 설정 -->
 	<!-- Application Loggers -->
 	<logger name="com.bitstudy.app">
 		<level value="info" />
 	</logger>
-	
+
 	<!-- 3rdparty Loggers -->
 	<logger name="org.springframework.core">
 		<level value="info" />
 	</logger>
-	
+
 	<logger name="org.springframework.beans">
 		<level value="info" />
 	</logger>
-	
+
 	<logger name="org.springframework.context">
 		<level value="info" />
 	</logger>
@@ -33,9 +61,12 @@
 	</logger>
 
 	<!-- Root Logger -->
+	<!-- 기본 출력 설정 -->
 	<root>
-		<priority value="warn" />
+		<priority value="error" />
 		<appender-ref ref="console" />
+		<appender-ref ref="rollingFile" />
+		<appender-ref ref="errFile" />
 	</root>
-	
+
 </log4j:configuration>

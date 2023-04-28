@@ -41,7 +41,7 @@ let a= "${URLDecoder.decode(param.msg)}";
 
                     <div>
                         <input type="text" id="userid" name="m_id" value="${ cookie.id.value }" placeholder="아이디">
-                        <input type="password" id="userpw" name="m_pw" placeholder="비밀번호" value="wprtlalrtm1!">
+                        <input type="password" id="userpw" name="m_pw" placeholder="비밀번호" value="">
                     </div>
                     <label for="remember_chk">
                         <input type="checkbox" id="remember_chk" name="rememberId"${empty cookie.id.value?"":"checked" }>아이디 저장
