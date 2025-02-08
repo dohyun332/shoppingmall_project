@@ -148,3 +148,12 @@ CREATE TABLE `product_img_dd` (
   `p_explainImg` varchar(255) NOT NULL,
   PRIMARY KEY (`p_no`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+CREATE TABLE `pg_channel_key` (
+  `seq` int unsigned NOT NULL AUTO_INCREMENT,
+  `channel_key` varchar(255) NOT NULL,
+  `company` varchar(255) NOT NULL,
+  `type` varchar(255) NOT NULL,
+  `reg_dt` timestamp default current_timestamp,
+  PRIMARY KEY (`seq`)
+) ENGINE=InnoDB AUTO_INCREMENT=86 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;

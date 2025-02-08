@@ -40,7 +40,7 @@ public class MemberController {
         System.out.println(memberDto);
         String m_email = memberDto.getM_email();
         String m_id = memberDto.getM_id();
-        if (emailCheck(m_email) == true && idCheck(m_id) == true ) {
+        if (emailCheck(m_email)&& idCheck(m_id)) {
 
             if ( RegexDate(memberDto) == true) {
                 memberService.memberJoin(memberDto);

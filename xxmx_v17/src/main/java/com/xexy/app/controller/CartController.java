@@ -22,12 +22,12 @@ public class CartController {
     @Autowired
     CartProductService cartProductService;
 
-//   메인, 상세페이지에서 장바구니 접속
+//   메인, 상세페이지에서 장바구니 접속2
     @RequestMapping("/cart")
     public String cart(HttpSession session, Model m) {
 
         String id = (String) session.getAttribute("id");
-        if(id == null || id == "null") {
+        if(id == null || id.equals("null")) {
             return "redirect:/login/login";
         }
         // deletepd=상품번호만 넘어올때 개별삭제
@@ -49,7 +49,7 @@ public class CartController {
     @ResponseBody
     public String cartAdd(HttpSession session, String p_serialNo, int[] p_choiceQuantity, String[] p_choiceSize) {
         String id = (String) session.getAttribute("id");
-        if(id == null || id == "null") {
+        if(id == null || id.equals("null")) {
             return "id";
         }
         System.out.println("================CartAdd 진입!==============");
